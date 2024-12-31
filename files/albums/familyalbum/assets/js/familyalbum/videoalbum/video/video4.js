@@ -5,7 +5,7 @@ const slides = [
         title: "Видео 1",
         block: 1,
         links: {
-            previous: 10,
+            previous: 11,
             next: 2,
             block: "Блок 1",
             blockPrevious: 1,
