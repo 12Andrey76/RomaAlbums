@@ -129,6 +129,19 @@ const slides = [
             blockNext: 1,
         }
     },
+    {
+        id: 11,
+        video: "https://rutube.ru/play/embed/2dd8bc2a17b1c60e9678ce981c31b605/?p=vT8jRxiZvF_GMDLCm4XwCw",
+        title: "Видео 11",
+        block: 1,
+        links: {
+            previous: 10,
+            next: 1,
+            block: "Блок 1",
+            blockPrevious: 1,
+            blockNext: 1,
+        }
+    },	
     
     // другие слайды...
 ];
