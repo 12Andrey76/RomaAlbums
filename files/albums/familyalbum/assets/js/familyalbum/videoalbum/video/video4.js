@@ -123,7 +123,7 @@ const slides = [
         block: 1,
         links: {
             previous: 9,
-            next: 1,
+            next: 11,
             block: "Блок 1",
             blockPrevious: 1,
             blockNext: 1,
@@ -141,7 +141,7 @@ const slides = [
             blockPrevious: 1,
             blockNext: 1,
         }
-    },	
+    },
     
     // другие слайды...
 ];
