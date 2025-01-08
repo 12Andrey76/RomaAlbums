@@ -57,7 +57,7 @@ const photoBlocks = [
       '../foto/foto4.html#slide27',
     ],
     imagesSrc: [
-      'https://im.wampi.ru/2025/01/07/1.th.webp', 'https://i1.wampi.ru/2025/01/07/2.th.webp', 'https://im.wampi.ru/2025/01/07/3.th.webp', 
+      'https://i1.wampi.ru/2025/01/08/a.th.jpg', 'https://im.wampi.ru/2025/01/08/b.th.jpg', 'https://i1.wampi.ru/2025/01/08/c.th.jpg', 
     ]
     
   },

@@ -313,7 +313,7 @@ const slides = [
 	},
 	{
 		id: 25,
-		image: "https://im.wampi.ru/2025/01/07/1.webp",
+		image: "https://i1.wampi.ru/2025/01/08/a.jpg",
 		title: "Фото 1",
 		block: 3,
 		links: {
@@ -326,7 +326,7 @@ const slides = [
 	},
 	{
 		id: 26,
-		image: "https://i1.wampi.ru/2025/01/07/2.webp",
+		image: "https://im.wampi.ru/2025/01/08/b.jpg",
 		title: "Фото 2",
 		block: 3,
 		links: {
@@ -339,7 +339,7 @@ const slides = [
 	},
 	{
 		id: 27,
-		image: "https://im.wampi.ru/2025/01/07/3.webp",
+		image: "https://i1.wampi.ru/2025/01/08/c.jpg",
 		title: "Фото 3",
 		block: 3,
 		links: {
