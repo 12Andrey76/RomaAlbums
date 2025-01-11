@@ -320,7 +320,7 @@ const slides = [
 			previous: 27,
 			next: 26,
 			block: "Блок 3",
-			blockPrevious: 2,
+			blockPrevious: 13,
 			blockNext: 1,
 		}
 	},
@@ -333,7 +333,7 @@ const slides = [
 			previous: 25,
 			next: 27,
 			block: "Блок 3",
-			blockPrevious: 2,
+			blockPrevious: 13,
 			blockNext: 1,
 		}
 	},
@@ -346,7 +346,7 @@ const slides = [
 			previous: 26,
 			next: 25,
 			block: "Блок 3",
-			blockPrevious: 2,
+			blockPrevious: 13,
 			blockNext: 1,
 		}
 	},
