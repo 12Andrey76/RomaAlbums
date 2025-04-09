@@ -320,7 +320,7 @@ const slides = [
 		title: "Фото 1",
 		block: 3,
 		links: {
-			previous: 27,
+			previous: 32,
 			next: 26,
 			block: "Блок 3",
 			blockPrevious: 13,
@@ -347,6 +347,71 @@ const slides = [
 		block: 3,
 		links: {
 			previous: 26,
+			next: 28,
+			block: "Блок 3",
+			blockPrevious: 13,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 28,
+		image: "https://s2.radikal.cloud/2025/04/09/4a04a07a19ae756f5.jpg",
+		title: "Фото 4",
+		block: 3,
+		links: {
+			previous: 27,
+			next: 29,
+			block: "Блок 3",
+			blockPrevious: 13,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 29,
+		image: "https://im.wampi.ru/2025/04/09/e.jpg",
+		title: "Фото 5",
+		block: 3,
+		links: {
+			previous: 28,
+			next: 30,
+			block: "Блок 3",
+			blockPrevious: 13,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 30,
+		image: "https://s2.radikal.cloud/2025/04/09/6cea4f0f8c7341b85.jpg",
+		title: "Фото 6",
+		block: 3,
+		links: {
+			previous: 29,
+			next: 31,
+			block: "Блок 3",
+			blockPrevious: 13,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 31,
+		image: "https://s2.radikal.cloud/2025/04/09/772dfa99123f08a59.jpg",
+		title: "Фото 7",
+		block: 3,
+		links: {
+			previous: 30,
+			next: 32,
+			block: "Блок 3",
+			blockPrevious: 13,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 32,
+		image: "https://s2.radikal.cloud/2025/04/09/8e3916dc5ec0aa356.jpg",
+		title: "Фото 8",
+		block: 3,
+		links: {
+			previous: 31,
 			next: 25,
 			block: "Блок 3",
 			blockPrevious: 13,

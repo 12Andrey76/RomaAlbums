@@ -67,7 +67,7 @@ body {
 }
 
 .slide img {
-	height: 100%;
+	width: 100%;
 	display: flex;
 	align-items: stretch;
 	padding: 5px
