@@ -316,7 +316,7 @@ const slides = [
 // ============####block3####=================
 	{
 		id: 25,
-		image: "https://s3.radikal.cloud/2025/01/26/1d0ed00d49cb13626.jpeg",
+		image: "https://s2.radikal.cloud/2025/04/22/18f9f28cd7fc955da.jpg",
 		title: "Фото 1",
 		block: 3,
 		links: {
@@ -329,7 +329,7 @@ const slides = [
 	},
 	{
 		id: 26,
-		image: "https://s3.radikal.cloud/2025/01/26/247787be33c420ef6.jpeg",
+		image: "https://s2.radikal.cloud/2025/04/22/2bc4b6279d5dddb93.jpg",
 		title: "Фото 2",
 		block: 3,
 		links: {
@@ -342,7 +342,7 @@ const slides = [
 	},
 	{
 		id: 27,
-		image: "https://s3.radikal.cloud/2025/01/26/3b4b56f42402c356f.jpeg",
+		image: "https://s2.radikal.cloud/2025/04/22/30e0e01c2d83b7e0a.jpg",
 		title: "Фото 3",
 		block: 3,
 		links: {
@@ -355,7 +355,7 @@ const slides = [
 	},
 	{
 		id: 28,
-		image: "https://s2.radikal.cloud/2025/04/09/4a04a07a19ae756f5.jpg",
+		image: "https://s2.radikal.cloud/2025/04/22/478b710fc8c36c057.jpg",
 		title: "Фото 4",
 		block: 3,
 		links: {
@@ -368,7 +368,7 @@ const slides = [
 	},
 	{
 		id: 29,
-		image: "https://im.wampi.ru/2025/04/09/e.jpg",
+		image: "https://s2.radikal.cloud/2025/04/22/5516d8e7891d7e06f.jpg",
 		title: "Фото 5",
 		block: 3,
 		links: {
@@ -381,7 +381,7 @@ const slides = [
 	},
 	{
 		id: 30,
-		image: "https://s2.radikal.cloud/2025/04/09/6cea4f0f8c7341b85.jpg",
+		image: "https://s2.radikal.cloud/2025/04/22/60ec620d3ff19f491.jpg",
 		title: "Фото 6",
 		block: 3,
 		links: {
@@ -394,7 +394,7 @@ const slides = [
 	},
 	{
 		id: 31,
-		image: "https://s2.radikal.cloud/2025/04/09/772dfa99123f08a59.jpg",
+		image: "https://s2.radikal.cloud/2025/04/22/7cc783737c10392da.jpg",
 		title: "Фото 7",
 		block: 3,
 		links: {
@@ -407,11 +407,24 @@ const slides = [
 	},
 	{
 		id: 32,
-		image: "https://s2.radikal.cloud/2025/04/09/8e3916dc5ec0aa356.jpg",
+		image: "https://s2.radikal.cloud/2025/04/22/86d9703dee3b30404.jpg",
 		title: "Фото 8",
 		block: 3,
 		links: {
 			previous: 31,
+			next: 33,
+			block: "Блок 3",
+			blockPrevious: 13,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 33,
+		image: "https://s2.radikal.cloud/2025/04/22/975f2c1967c13ad7c.jpg",
+		title: "Фото 9",
+		block: 3,
+		links: {
+			previous: 32,
 			next: 25,
 			block: "Блок 3",
 			blockPrevious: 13,

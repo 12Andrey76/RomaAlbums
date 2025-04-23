@@ -14,7 +14,7 @@ if (currentPage.includes("album.html")) {
 	albumlink = "../../album.html";
 	baseLink = "../../../../index.html";
 	albumTitle = "Фото 1 год";
-	prevAlbumLink = "fotoalbum4.html";
+	prevAlbumLink = "fotoalbum5.html";
 	nextAlbumLink = "fotoalbum2.html";
 } else if (currentPage.includes("fotoalbum2.html")) {
 	albumlink = "../../album.html";
@@ -33,6 +33,12 @@ if (currentPage.includes("album.html")) {
 	baseLink = "../../../../index.html";
 	albumTitle = "Фото 4 года";
 	prevAlbumLink = "fotoalbum3.html";
+	nextAlbumLink = "fotoalbum5.html";
+} else if (currentPage.includes("fotoalbum5.html")) {
+	albumlink = "../../album.html";
+	baseLink = "../../../../index.html";
+	albumTitle = "Фото 5 лет";
+	prevAlbumLink = "fotoalbum4.html";
 	nextAlbumLink = "fotoalbum1.html";
 
 } else if (currentPage.includes("foto1.html")) {
@@ -47,12 +53,15 @@ if (currentPage.includes("album.html")) {
 } else if (currentPage.includes("foto4.html")) {
 	albumlink = "../../album.html";
 	baseLink = "../fotoalbum/fotoalbum4.html";
+} else if (currentPage.includes("foto5.html")) {
+	albumlink = "../../album.html";
+	baseLink = "../fotoalbum/fotoalbum5.html";
 	//video =================================
 } else if (currentPage.includes("videoalbum1.html")) {
 	albumlink = "../../album.html";
 	baseLink = "../../../../index.html";
 	albumTitle = "Видео 1 год";
-	prevAlbumLink = "videoalbum4.html";
+	prevAlbumLink = "videoalbum5.html";
 	nextAlbumLink = "videoalbum2.html";
 } else if (currentPage.includes("videoalbum2.html")) {
 	albumlink = "../../album.html";
@@ -71,6 +80,12 @@ if (currentPage.includes("album.html")) {
 	baseLink = "../../../../index.html";
 	albumTitle = "Видео 4 года";
 	prevAlbumLink = "videoalbum3.html";
+	nextAlbumLink = "videoalbum5.html";
+} else if (currentPage.includes("videoalbum5.html")) {
+	albumlink = "../../album.html";
+	baseLink = "../../../../index.html";
+	albumTitle = "Видео 5 лет";
+	prevAlbumLink = "videoalbum4.html";
 	nextAlbumLink = "videoalbum1.html";
 	
 } else if (currentPage.includes("video1.html")) {
@@ -85,6 +100,9 @@ if (currentPage.includes("album.html")) {
 } else if (currentPage.includes("video4.html")) {
 	albumlink = "../../album.html";
 	baseLink = "../videoalbum/videoalbum4.html";
+} else if (currentPage.includes("video5.html")) {
+	albumlink = "../../album.html";
+	baseLink = "../videoalbum/videoalbum5.html";
 }
 
 // Определяем HTML-код для каждой секции

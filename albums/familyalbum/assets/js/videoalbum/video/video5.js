@@ -1,0 +1,49 @@
+const slides = [
+  {
+      id: 1,
+      video: "https://rutube.ru/play/embed/bbdb4ee9edcf4d553810bc94d10ead74/?p=AcBEE4Z1HJNu_IsoiJqaXA",
+      title: "Видео 1",
+      block: 1,
+      links: {
+          previous: 2,
+          next: 2,
+          block: "Блок 1",
+          blockPrevious: 1,
+          blockNext: 1,
+      }
+  },
+  {
+      id: 2,
+      video: "https://rutube.ru/play/embed/107112bc04a791dc732bf99cf07b0072/?p=OJgWrQvAP_kkbglQzLnlDg",
+      title: "Видео 2",
+      block: 1,
+      links: {
+          previous: 1,
+          next: 1,
+          block: "Блок 1",
+          blockPrevious: 1,
+          blockNext: 1,
+      }
+  },
+  
+  // другие слайды...
+];
+
+function loadScript(url) {
+return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = url;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error(`Failed to load script: ${url}`));
+    document.head.appendChild(script);
+});
+}
+
+// Загрузка скрипта slides.js
+loadScript('../../assets/js/js-component/video-slides.js')
+.then(() => {
+    console.log('Slides script loaded successfully');
+})
+.catch(error => {
+    console.error(error);
+});
