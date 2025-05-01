@@ -5,7 +5,7 @@ const slides = [
       title: "Видео 1",
       block: 1,
       links: {
-          previous: 2,
+          previous: 3,
           next: 2,
           block: "Блок 1",
           blockPrevious: 1,
@@ -19,6 +19,19 @@ const slides = [
       block: 1,
       links: {
           previous: 1,
+          next: 3,
+          block: "Блок 1",
+          blockPrevious: 1,
+          blockNext: 1,
+      }
+  },
+  {
+      id: 3,
+      video: "https://rutube.ru/play/embed/4459857fa5f75242e4fba5fe54f5a770/?p=XXS_fc5gSQqxZsNC60hWVQ",
+      title: "Видео 3",
+      block: 1,
+      links: {
+          previous: 2,
           next: 1,
           block: "Блок 1",
           blockPrevious: 1,
