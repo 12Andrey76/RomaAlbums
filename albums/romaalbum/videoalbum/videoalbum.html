@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Видеоальбом</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>videoalbum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/romaalbum.css">
   </head>
   <body>
-
     <div class="container-fluid header text-center">
       <div class="container">
 
@@ -33,255 +32,361 @@
     </div>
 
     <div class="content container">
+
       <div class="row">
 
+        <!-- content start -->
         <div class="col-md-6 order-md-2 text-center">
 
-          <div class="row">
+          <div class="container d-md-none d-sm-block">
+
+            <div class="row">
+
+              <div class="col">
+                <div class="menu_album">
+                  <a href="../album.html">главная</a>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="menu_album">
+                  <a href="../album.html">меню</a>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="menu_album">
+                  <a href="index.html">выход</a>
+                </div>
+              </div>
               
-            <div class="col-4 text-center d-md-none d-sm-block">
-              <div class="menu_album"><a href="../album.html">главная</a></div>
-            </div>
-
-            <div class="col-4 text-center d-md-none d-sm-block">
-              <div class="menu_album"><a href="../album.html">меню</a></div>
-            </div>
-
-            <div class="col-4 text-center d-md-none d-sm-block">
-              <div class="menu_album"><a href="../../../index.html">выход</a></div>
             </div>
 
           </div>
-          <div class="watch_album text-center"><h2>Видеоальбом</h2></div>
-          <!-- content start -->
-          <div id="carouselExample" class="carousel slide">
+          
+          <div class="container preview" id="preview-container">
 
-            <div class="preview carousel-inner">
-
-              <div class="carousel-item active">
-
-                <div class="watch_album text-center"><p><a href="video/video1.html">3 Месяца >></a></p></div>
-
+            <div class="row prev" id="prev1">
+  
+              <div class="container">
                 <div class="row">
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/1.th.jpg" class="img-thumbnail" alt="preview 1">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/2.th.jpg" class="img-thumbnail" alt="preview 2">
-                   </div>
-
-                </div>
-
-              </div>
-              <div class="carousel-item">
-
-                <div class="watch_album text-center"><p><a href="video/video2.html">4 Месяца >></a></p></div>
-
-                <div class="row">
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/3.th.jpg" class="img-thumbnail" alt="preview 1">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/4.th.jpg" class="img-thumbnail" alt="preview 2">
-                 </div>
-
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev9" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>3 Месяца</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev2" class="next-block">&gt;</a></div>
+                  </div>
                 </div>
               </div>
-              <div class="carousel-item">
-
-                <div class="watch_album text-center"><p><a href="video/video3.html">6 Месяцев >></a></p></div>
-
-                <div class="row">
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/5.th.jpg" class="img-thumbnail" alt="preview 1">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/6.th.jpg" class="img-thumbnail" alt="preview 2">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/7.th.jpg" class="img-thumbnail" alt="preview 3">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/8.th.jpg" class="img-thumbnail" alt="preview 4">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/9.th.jpg" class="img-thumbnail" alt="preview 5">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/10.th.jpg" class="img-thumbnail" alt="preview 6">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/11.th.jpg" class="img-thumbnail" alt="preview 7">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/12.th.jpg" class="img-thumbnail" alt="preview 8">
-                 </div>
-
-                </div>
+  
+              <div class="img-group row row-cols-3">
+                <a href="video/video1.html#slide1">
+                  <img src="https://i8.wampi.ru/2024/01/19/1.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+                
+                <a href="video/video1.html#slide2">
+                  <img src="https://im.wampi.ru/2024/01/19/2.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
 
               </div>
-              <div class="carousel-item">
-
-                <div class="watch_album text-center"><p><a href="video/video4.html">7 Месяцев >></a></p></div>
-
+            </div>
+            <div class="row prev" id="prev2">
+  
+              <div class="container">
                 <div class="row">
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/13.th.jpg" class="img-thumbnail" alt="preview 1">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/14.th.jpg" class="img-thumbnail" alt="preview 2">
-                 </div>
-
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev1" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>4 Месяца</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev3" class="next-block">&gt;</a></div>
+                  </div>
                 </div>
               </div>
-              <div class="carousel-item">
-
-                <div class="watch_album text-center"><p><a href="video/video5.html">8 Месяцев >></a></p></div>
-
+  
+              <div class="img-group row row-cols-3">
+                <a href="video/video2.html#slide1">
+                  <img src="https://i1.wampi.ru/2024/01/19/3.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+                
+                <a href="video/video2.html#slide2">
+                  <img src="https://i8.wampi.ru/2024/01/19/4.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
+    
+              </div>
+            </div>
+            
+            <div class="row prev" id="prev3">
+  
+              <div class="container">
                 <div class="row">
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/15.th.jpg" class="img-thumbnail" alt="preview 1">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/16.th.jpg" class="img-thumbnail" alt="preview 2">
-                 </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/17.th.jpg" class="img-thumbnail" alt="preview 3">
-                 </div>
-
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev2" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>6 Месяцев</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev4" class="next-block">&gt;</a></div>
+                  </div>
                 </div>
               </div>
-              <div class="carousel-item">
+              
+              <div class="img-group row row-cols-3">
+                <a href="video/video3.html#slide1">
+                  <img src="https://i1.wampi.ru/2024/01/19/5.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+                
+                <a href="video/video3.html#slide2">
+                  <img src="https://i8.wampi.ru/2024/01/19/6.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
 
-                <div class="watch_album text-center"><p><a href="video/video6.html">9 Месяцев >></a></p></div>
+                <a href="video/video3.html#slide3">
+                  <img src="https://im.wampi.ru/2024/01/19/7.th.jpg" class="img-thumbnail" alt="preview 3">
+                </a>
 
-                <div class="row">
+                <a href="video/video3.html#slide4">
+                  <img src="https://i1.wampi.ru/2024/01/19/8.th.jpg" class="img-thumbnail" alt="preview 4">
+                </a>
 
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/18.th.jpg" class="img-thumbnail" alt="preview 1">
-                  </div>
+                <a href="video/video3.html#slide5">
+                  <img src="https://i8.wampi.ru/2024/01/19/9.th.jpg" class="img-thumbnail" alt="preview 5">
+                </a>
 
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/19.th.jpg" class="img-thumbnail" alt="preview 2">
-                  </div>
+                <a href="video/video3.html#slide6">
+                  <img src="https://im.wampi.ru/2024/01/19/10.th.jpg" class="img-thumbnail" alt="preview 6">
+                </a>
 
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/20.th.jpg" class="img-thumbnail" alt="preview 3">
-                  </div>
+                <a href="video/video3.html#slide7">
+                  <img src="https://i1.wampi.ru/2024/01/19/11.th.jpg" class="img-thumbnail" alt="preview 7">
+                </a>
 
-                </div>
+                <a href="video/video3.html#slide8">
+                  <img src="https://i8.wampi.ru/2024/01/19/12.th.jpg" class="img-thumbnail" alt="preview 8">
+                </a>
+
               </div>
-              <div class="carousel-item">
-
-                <div class="watch_album text-center"><p><a href="video/video7.html">10 Месяцев >></a></p></div>
-
-                <div class="row">
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/21.th.jpg" class="img-thumbnail" alt="preview 1">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/22.th.jpg" class="img-thumbnail" alt="preview 2">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/23.th.jpg" class="img-thumbnail" alt="preview 3">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/24.th.jpg" class="img-thumbnail" alt="preview 4">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/25.th.jpg" class="img-thumbnail" alt="preview 5">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/26.th.jpg" class="img-thumbnail" alt="preview 6">
-                  </div>
-
-                </div>
-              </div>
-              <div class="carousel-item">
-
-                <div class="watch_album text-center"><p><a href="video/video8.html">11 Месяцев >></a></p></div>
-
-                <div class="row">
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/27.th.jpg" class="img-thumbnail" alt="preview 1">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/28.th.jpg" class="img-thumbnail" alt="preview 2">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/29.th.jpg" class="img-thumbnail" alt="preview 3">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/30.th.jpg" class="img-thumbnail" alt="preview 4">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/31.th.jpg" class="img-thumbnail" alt="preview 5">
-                  </div>
-
-                </div>
-              </div>
-              <div class="carousel-item">
-
-                <div class="watch_album text-center"><p><a href="video/video9.html">1 Годик >></a></p></div>
-
-                <div class="row">
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://im.wampi.ru/2024/01/19/32.th.jpg" class="img-thumbnail" alt="preview 1">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i1.wampi.ru/2024/01/19/33.th.jpg" class="img-thumbnail" alt="preview 2">
-                  </div>
-
-                  <div class="col-md-3 col-4">
-                    <img src="https://i8.wampi.ru/2024/01/19/34.th.jpg" class="img-thumbnail" alt="preview 3">
-                  </div>
-
-                </div>
-              </div>
-
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
+            <div class="row prev" id="prev4">
+  
+              <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev3" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>7 Месяцев</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev5" class="next-block">&gt;</a></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="img-group row row-cols-3">
 
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+                <a href="video/video4.html#slide1">
+                  <img src="https://im.wampi.ru/2024/01/19/13.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+
+                <a href="video/video4.html#slide2">
+                  <img src="https://i1.wampi.ru/2024/01/19/14.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
+
+              </div>
+            </div>
+            <div class="row prev" id="prev5">
+  
+              <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev4" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>8 Месяцев</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev6" class="next-block">&gt;</a></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="img-group row row-cols-3">
+                <a href="video/video5.html#slide1">
+                  <img src="https://i8.wampi.ru/2024/01/19/15.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+                
+                <a href="video/video5.html#slide2">
+                  <img src="https://im.wampi.ru/2024/01/19/16.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
+                
+                <a href="video/video5.html#slide3">
+                  <img src="https://i1.wampi.ru/2024/01/19/17.th.jpg" class="img-thumbnail" alt="preview 3">
+                </a>
+                
+              </div>
+            </div>
+            <div class="row prev" id="prev6">
+  
+              <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev5" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>9 Месяцев</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev7" class="next-block">&gt;</a></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="img-group row row-cols-3">
+                <a href="video/video6.html#slide1">
+                  <img src="https://im.wampi.ru/2024/01/19/18.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+                
+                <a href="video/video6.html#slide2">
+                  <img src="https://i1.wampi.ru/2024/01/19/19.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
+                
+                <a href="video/video6.html#slide3">
+                  <img src="https://i8.wampi.ru/2024/01/19/20.th.jpg" class="img-thumbnail" alt="preview 3">
+                </a>
+
+              </div>
+            </div>
+            <div class="row prev" id="prev7">
+  
+              <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev6" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>10 Месяцев</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev8" class="next-block">&gt;</a></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="img-group row row-cols-3">
+                <a href="video/video7.html#slide1">
+                  <img src="https://i8.wampi.ru/2024/01/19/21.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+                
+                <a href="video/video7.html#slide2">
+                  <img src="https://im.wampi.ru/2024/01/19/22.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
+                
+                <a href="video/video7.html#slide3">
+                  <img src="https://i1.wampi.ru/2024/01/19/23.th.jpg" class="img-thumbnail" alt="preview 3">
+                </a>
+                
+                <a href="video/video7.html#slide4">
+                  <img src="https://i8.wampi.ru/2024/01/19/24.th.jpg" class="img-thumbnail" alt="preview 4">
+                </a>
+                
+                <a href="video/video7.html#slide5">
+                  <img src="https://im.wampi.ru/2024/01/19/25.th.jpg" class="img-thumbnail" alt="preview 5">
+                </a>
+                
+                <a href="video/video7.html#slide6">
+                  <img src="https://i1.wampi.ru/2024/01/19/26.th.jpg" class="img-thumbnail" alt="preview 6">
+                </a>
+                
+              </div>
+            </div>
+            <div class="row prev" id="prev8">
+  
+              <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev7" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>11 Месяцев</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev9" class="next-block">&gt;</a></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="img-group row row-cols-3">
+                <a href="video/video8.html#slide1">
+                  <img src="https://i1.wampi.ru/2024/01/19/27.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+                
+                <a href="video/video8.html#slide2">
+                  <img src="https://i8.wampi.ru/2024/01/19/28.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
+                
+                <a href="video/video8.html#slide3">
+                  <img src="https://im.wampi.ru/2024/01/19/29.th.jpg" class="img-thumbnail" alt="preview 3">
+                </a>
+                
+                <a href="video/video8.html#slide4">
+                  <img src="https://i1.wampi.ru/2024/01/19/30.th.jpg" class="img-thumbnail" alt="preview 4">
+                </a>
+                
+                <a href="video/video8.html#slide5">
+                  <img src="https://i8.wampi.ru/2024/01/19/31.th.jpg" class="img-thumbnail" alt="preview 5">
+                </a>
+                
+              </div>
+            </div>
+            <div class="row prev" id="prev9">
+  
+              <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev8" class="prev-block">&lt;</a></div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                    class="slide_album"><h4>1 Годик</h4></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="slide_album"><a href="#prev1" class="next-block">&gt;</a></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="img-group row row-cols-3">
+                <a href="video/video9.html#slide1">
+                  <img src="https://im.wampi.ru/2024/01/19/32.th.jpg" class="img-thumbnail" alt="preview 1">
+                </a>
+                
+                <a href="video/video9.html#slide2">
+                  <img src="https://i1.wampi.ru/2024/01/19/33.th.jpg" class="img-thumbnail" alt="preview 2">
+                </a>
+
+                <a href="video/video9.html#slide3">
+                  <img src="https://i8.wampi.ru/2024/01/19/34.th.jpg" class="img-thumbnail" alt="preview 3">
+                </a>
+
+              </div>
+            </div>
+
           </div>
-          <!-- content finish -->
 
         </div>
 
@@ -308,12 +413,6 @@
           <div class="card text-bg-white mb-3">
             <div class="card-body">
               <p class="card-text">Фото</p>
-            </div>
-          </div>
-
-          <div class="card text-bg-white mb-3">
-            <div class="card-body">
-              <p class="card-text">==========</p>
             </div>
           </div>
 
@@ -345,21 +444,15 @@
             </div>
           </div>
 
-          <div class="card text-bg-white mb-3">
-            <div class="card-body">
-              <p class="card-text">==========</p>
-            </div>
-          </div>
-
         </div>
 
       </div>
+
     </div>
 
     <footer class="text-center">
       <h1>Альбом Ромы 2021 ©</h1>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
   </body>
 </html>

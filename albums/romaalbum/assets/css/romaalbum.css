@@ -7,6 +7,81 @@ body {
   background-color: #018c19;
 }
 
+.albummenu {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.preview {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.prev {
+	display: inline-block;
+	margin-right: 20px;
+	width: 105%;
+}
+
+.img-group {
+	padding: 0;
+	margin: 0;
+}
+
+.img-group img {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.slide {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	white-space: nowrap;
+	margin-bottom: 5%;
+}
+
+.item {
+	width: 105%;
+	height: 100%;
+	display: inline-block;
+	margin-right: 19px;
+}
+
+.slide img {
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	padding: 5px
+}
+
+.rpev-video img{
+	border-radius: 100%;
+}
+
+.responsive-iframe {
+  position: relative;
+  padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-iframe iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-radius: 10px;
+}
+
 a {
 	text-decoration: none;
 }
@@ -52,33 +127,6 @@ a {
 	margin-bottom: 5%;
 }
 
-.album, .cover  {
-  height: 61px;
-  background-color: darkgoldenrod;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  color: black;
-  margin-bottom: 25px;
-  padding-top: 1px;
-}
-
-.cover a {
-	text-decoration: none;
-}
-
-.cover {padding-top: 7px;}
-
-.album a {
-	color: black;
-	text-decoration: none;
-	font-size: 35px;
-}
-
-.album p {
-  padding-top: 10px;
-  font-size: 25px;
-}
-
 .menu_album {
 	background-color: #59ff3f;
   font-size: 130%;
@@ -96,31 +144,19 @@ a {
 	color: green;
 }
 
-.watch_album {
-  background-color: darkgoldenrod;
-  border-top-left-radius: 5px;
+.slide_album {
+	background-color: darkgoldenrod;
+	border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  margin-bottom: 25px;
-  font-size: 30px;
-
+	margin-bottom: 24px;
+	padding: 10px 0 5px 0;
+	height: 60px;
 }
 
-.watch_album p {
-  padding: 8px 0 5px 0;
-}
-
-.watch_album h2 {
-  padding: 14px 0 14px 0;
-  color: black;
-}
-
-.watch_album a {
-	text-decoration: none;
-	color: white;
-}
-
-.watch_album a:hover {
-	color: #3b46e9;
+.slide_album h2, .slide_album h3, .slide_album h4, .slide_album a {
+	font-size: 23px;
+	color: black;
+	padding-top: 10px;
 }
 
 .videomenu img {
