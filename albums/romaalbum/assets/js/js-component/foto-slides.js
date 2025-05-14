@@ -38,36 +38,19 @@ function generateSlides() {
 				</div>
 			</div>`;
 
-		 // Создаем контейнер с классом 'container'
-     const iframeContainer = document.createElement('div');
-     iframeContainer.className = 'container'; // Применяем класс 'container'
- 
-     // Создаем div с классом 'responsive-iframe'
-     const responsiveIframeDiv = document.createElement('div');
-     responsiveIframeDiv.className = 'responsive-iframe';
- 
-     // Создаем iframe
-     const iframeElement = document.createElement('iframe');
-     iframeElement.src = slide.video;
-     iframeElement.className = 'iframe-class';
-     iframeElement.style.width = '100%';
-     iframeElement.style.height = '100%';
-		 iframeElement.setAttribute('allowfullscreen', ''); 
-		iframeElement.setAttribute('webkitallowfullscreen', ''); 
-		iframeElement.setAttribute('mozallowfullscreen', '');
-		iframeElement.setAttribute('loading', 'lazy');
- 
-     // Добавляем iframe в responsive-iframe div
-     responsiveIframeDiv.appendChild(iframeElement);
- 
-     // Добавляем responsive-iframe div в контейнер
-     iframeContainer.appendChild(responsiveIframeDiv);
+			// Создаем контейнер для изображения и добавляем его в слайд
+		const imageElement = document.createElement('img');
+		imageElement.src = slide.image;
+		imageElement.className = 'img-thumbnail';
+		imageElement.alt = slide.title;
+		const imageContainer = document.createElement('div');
+		imageContainer.appendChild(imageElement);
 
 		// Сначала добавляем блок навигации, затем навигацию для слайдов, и в конце изображение
 		slideDiv.appendChild(blockNavDiv); // Навигация по блокам      
 		slideDiv.appendChild(slideNavDiv); // Навигация по слайдам
 		container.appendChild(slideDiv);
-		slideDiv.appendChild(iframeContainer); // iframe
+		slideDiv.appendChild(imageContainer); // Изображение
   });
 }
 

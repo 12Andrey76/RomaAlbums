@@ -29,12 +29,17 @@ body {
 	width: 105%;
 }
 
-.img-group {
+.img-album {
 	padding: 0;
 	margin: 0;
 }
 
 .img-group img {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.img-album img {
 	margin-bottom: 20px;
 	width: 100%;
 }
@@ -61,7 +66,7 @@ body {
 	padding: 5px
 }
 
-.rpev-video img{
+.prev-video {
 	border-radius: 100%;
 }
 
@@ -144,7 +149,7 @@ a {
 	color: green;
 }
 
-.slide_album {
+.slide_album, .block_album {
 	background-color: darkgoldenrod;
 	border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -153,7 +158,7 @@ a {
 	height: 60px;
 }
 
-.slide_album h2, .slide_album h3, .slide_album h4, .slide_album a {
+.slide_album h2, .block_album h2, .slide_album h3, .block_album h3, .slide_album h4, .block_album h4, .slide_album a, .block_album a {
 	font-size: 23px;
 	color: black;
 	padding-top: 10px;
