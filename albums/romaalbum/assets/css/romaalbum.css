@@ -226,7 +226,7 @@ iframe {
 	color: blue;
 }
 
-p.active a, p.active {
+.card-body a.active, p.active {
 	color: #3a3dd6;
 }
 
