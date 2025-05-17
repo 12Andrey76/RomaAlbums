@@ -273,7 +273,8 @@ let activeIds = [];
 
 // Определяем активные элементы на основе текущей страницы
 if (currentPage.includes("album.html")) {
-	activeIds.push("active-album-menu");
+    document.getElementById('active-album-menu').classList.add('active');
+    document.querySelector('#right #active-album-menu')?.classList.add('active');
 } else if (currentPage.includes("fotoalbum1.html")) {
 	activeIds.push("active-photo-album");
 } else if (currentPage.includes("fotoalbum2.html")) {
