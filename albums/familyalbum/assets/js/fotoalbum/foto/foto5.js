@@ -111,7 +111,7 @@ const slides = [
 		block: 1,
 		links: {
 			previous: 8,
-			next: 1,
+			next: 10,
 			block: "Блок 1",
 			blockPrevious: 1,
 			blockNext: 1,
