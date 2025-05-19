@@ -6,7 +6,7 @@ const slides = [
 		title: "Фото 1",
 		block: 1,
 		links: {
-			previous: 9,
+			previous: 11,
 			next: 2,
 			block: "Блок 1",
 			blockPrevious: 1,
@@ -117,7 +117,32 @@ const slides = [
 			blockNext: 1,
 		}
 	},
-
+	{
+		id: 10,
+		image: "https://s1.radikal.cloud/2025/05/19/106b4e361664fe2d46.jpg",
+		title: "Фото 10",
+		block: 1,
+		links: {
+			previous: 9,
+			next: 11,
+			block: "Блок 1",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 11,
+		image: "https://s1.radikal.cloud/2025/05/19/111f2216470c4e0040.jpg",
+		title: "Фото 11",
+		block: 1,
+		links: {
+			previous: 10,
+			next: 1,
+			block: "Блок 1",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
 	
 // ============####block2####=================
 	
