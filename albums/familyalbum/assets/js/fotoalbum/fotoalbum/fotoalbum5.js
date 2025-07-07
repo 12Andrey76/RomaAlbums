@@ -13,6 +13,15 @@ const albums = [
 			{ src: 'https://s2.radikal.cloud/2025/05/01/9c1def78b826dc862.th.jpg', href: '../foto/foto5.html#slide9', alt: 'preview 9' },
 			{ src: 'https://s1.radikal.cloud/2025/05/19/106b4e361664fe2d46.th.jpg', href: '../foto/foto5.html#slide10', alt: 'preview 10' },
 			{ src: 'https://s1.radikal.cloud/2025/05/19/111f2216470c4e0040.th.jpg', href: '../foto/foto5.html#slide11', alt: 'preview 11' },
+			{ src: 'https://s3.radikal.cloud/2025/07/06/125ec038bb6dcabd7b.th.jpg', href: '../foto/foto5.html#slide12', alt: 'preview 12' },
+		],
+	},
+	{
+		title: 'Блок #2',
+		images: [
+			{ src: 'https://s3.radikal.cloud/2025/07/06/132eece640714142ae.th.jpg', href: '../foto/foto5.html#slide13', alt: 'preview 13' },
+			{ src: 'https://s3.radikal.cloud/2025/07/06/14a72b1a9303e07e95.th.jpg', href: '../foto/foto5.html#slide14', alt: 'preview 14' },
+			
 		],
 	},
 	

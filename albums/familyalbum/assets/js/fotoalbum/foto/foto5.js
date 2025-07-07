@@ -6,11 +6,11 @@ const slides = [
 		title: "Фото 1",
 		block: 1,
 		links: {
-			previous: 11,
+			previous: 12,
 			next: 2,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -22,8 +22,8 @@ const slides = [
 			previous: 1,
 			next: 3,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -35,8 +35,8 @@ const slides = [
 			previous: 2,
 			next: 4,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -48,8 +48,8 @@ const slides = [
 			previous: 3,
 			next: 5,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -61,8 +61,8 @@ const slides = [
 			previous: 4,
 			next: 6,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -74,8 +74,8 @@ const slides = [
 			previous: 5,
 			next: 7,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -87,8 +87,8 @@ const slides = [
 			previous: 6,
 			next: 8,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -100,8 +100,8 @@ const slides = [
 			previous: 7,
 			next: 9,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -113,8 +113,8 @@ const slides = [
 			previous: 8,
 			next: 10,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -126,8 +126,8 @@ const slides = [
 			previous: 9,
 			next: 11,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	{
@@ -137,15 +137,53 @@ const slides = [
 		block: 1,
 		links: {
 			previous: 10,
+			next: 12,
+			block: "Блок 1",
+			blockPrevious: 13,
+			blockNext: 13,
+		}
+	},
+	{
+		id: 12,
+		image: "https://s3.radikal.cloud/2025/07/06/125ec038bb6dcabd7b.jpg",
+		title: "Фото 12",
+		block: 1,
+		links: {
+			previous: 11,
 			next: 1,
 			block: "Блок 1",
-			blockPrevious: 1,
-			blockNext: 1,
+			blockPrevious: 13,
+			blockNext: 13,
 		}
 	},
 	
 // ============####block2####=================
-	
+	{
+		id: 13,
+		image: "https://s3.radikal.cloud/2025/07/06/132eece640714142ae.jpg",
+		title: "Фото 13",
+		block: 1,
+		links: {
+			previous: 14,
+			next: 14,
+			block: "Блок 2",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 14,
+		image: "https://s3.radikal.cloud/2025/07/06/14a72b1a9303e07e95.jpg",
+		title: "Фото 14",
+		block: 1,
+		links: {
+			previous: 13,
+			next: 13,
+			block: "Блок 2",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
 // ============####block3####=================
 	
 ];
