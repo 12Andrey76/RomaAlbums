@@ -161,10 +161,10 @@ const slides = [
 	{
 		id: 13,
 		image: "https://s3.radikal.cloud/2025/07/06/132eece640714142ae.jpg",
-		title: "Фото 13",
+		title: "Фото 1",
 		block: 1,
 		links: {
-			previous: 14,
+			previous: 18,
 			next: 14,
 			block: "Блок 2",
 			blockPrevious: 1,
@@ -174,10 +174,62 @@ const slides = [
 	{
 		id: 14,
 		image: "https://s3.radikal.cloud/2025/07/06/14a72b1a9303e07e95.jpg",
-		title: "Фото 14",
+		title: "Фото 2",
 		block: 1,
 		links: {
 			previous: 13,
+			next: 15,
+			block: "Блок 2",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 15,
+		image: "https://s3.radikal.cloud/2025/07/07/15274113fff7b61b07.jpg",
+		title: "Фото 3",
+		block: 1,
+		links: {
+			previous: 14,
+			next: 16,
+			block: "Блок 2",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 16,
+		image: "https://s3.radikal.cloud/2025/07/07/16c182c2609972dca8.jpg",
+		title: "Фото 4",
+		block: 1,
+		links: {
+			previous: 15,
+			next: 17,
+			block: "Блок 2",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 17,
+		image: "https://s3.radikal.cloud/2025/07/07/171c7925c0a0fb7fac.jpg",
+		title: "Фото 5",
+		block: 1,
+		links: {
+			previous: 16,
+			next: 18,
+			block: "Блок 2",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 18,
+		image: "https://s3.radikal.cloud/2025/07/07/18e9a5edfd6ffc8e36.jpg",
+		title: "Фото 6",
+		block: 1,
+		links: {
+			previous: 17,
 			next: 13,
 			block: "Блок 2",
 			blockPrevious: 1,
