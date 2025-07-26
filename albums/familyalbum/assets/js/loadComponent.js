@@ -240,14 +240,6 @@ if (currentPage.includes("album.html")) {
 	activeIds.push("active-video-album");
 } else if (currentPage.includes("video4.html")) {
 	activeIds.push("active-video");
-} else if (currentPage.includes("fotoalbum5.html")) {
-	activeIds.push("active-photo-album");
-} else if (currentPage.includes("foto5.html")) {
-	activeIds.push("active-photo");
-} else if (currentPage.includes("videoalbum5.html")) {
-	activeIds.push("active-video-album");
-} else if (currentPage.includes("video5.html")) {
-	activeIds.push("active-video");
 }  
 
 // Применяем класс "active" к соответствующим элементам меню
