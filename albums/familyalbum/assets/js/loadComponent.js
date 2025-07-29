@@ -188,7 +188,7 @@ const sidebarHTML = `
 
 const footerHTML = `
 <footer class="text-center">
-  <h1>&copy; 2021 - 2024 СЕМЕЙНЫЙ АЛЬБОМ</h1>
+ <h1>&copy; 2021 -  <span id="year"></span> СЕМЕЙНЫЙ АЛЬБОМ</h1> 
 </footer>
 `;
 
@@ -202,6 +202,8 @@ if (navContainer) {
 
 document.getElementById('sidebar').innerHTML = sidebarHTML;
 document.getElementById('footer').innerHTML = footerHTML;
+
+const currentYear = new Date().getFullYear(); const yearSpan = document.getElementById('year'); if (yearSpan) { yearSpan.textContent = currentYear; }
 
 let activeIds = [];
 
@@ -239,6 +241,14 @@ if (currentPage.includes("album.html")) {
 } else if (currentPage.includes("videoalbum4.html")) {
 	activeIds.push("active-video-album");
 } else if (currentPage.includes("video4.html")) {
+	activeIds.push("active-video");
+} else if (currentPage.includes("fotoalbum5.html")) {
+	activeIds.push("active-photo-album");
+} else if (currentPage.includes("foto5.html")) {
+	activeIds.push("active-photo");
+} else if (currentPage.includes("videoalbum5.html")) {
+	activeIds.push("active-video-album");
+} else if (currentPage.includes("video5.html")) {
 	activeIds.push("active-video");
 }  
 
