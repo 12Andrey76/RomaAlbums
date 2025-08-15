@@ -2,7 +2,7 @@ const albums = [
 	{
 		title: '9 Месяцев',
 		images: [
-			{ src: 'https://s2.radikal.cloud/2025/06/22/18fba15717e6d4d155.th.jpg', href: '../video/videohtml#slide18', alt: 'preview 1' },
+			{ src: 'https://s2.radikal.cloud/2025/06/22/18fba15717e6d4d155.th.jpg', href: '../video/video.html#slide18', alt: 'preview 1' },
 			{ src: 'https://s3.radikal.cloud/2025/06/22/19f8a9914acc86dad1.th.jpg', href: '../video/video.html#slide19', alt: 'preview 2' },
 			{ src: 'https://s3.radikal.cloud/2025/06/22/207dbffcb8d93df4fb.th.jpg', href: '../video/video.html#slide20', alt: 'preview 3' },
 		],
