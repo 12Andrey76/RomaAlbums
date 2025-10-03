@@ -25,6 +25,8 @@ const albums = [
 			{ src: 'https://s3.radikal.cloud/2025/07/07/16c182c2609972dca8.th.jpg', href: '../foto/foto5.html#slide16', alt: 'preview 16' },
 			{ src: 'https://s3.radikal.cloud/2025/07/07/171c7925c0a0fb7fac.th.jpg', href: '../foto/foto5.html#slide17', alt: 'preview 17' },
 			{ src: 'https://s3.radikal.cloud/2025/07/07/18e9a5edfd6ffc8e36.th.jpg', href: '../foto/foto5.html#slide18', alt: 'preview 18' },
+			{ src: 'https://s2.radikal.cloud/2025/10/01/1000010471d3d9bf1a18edd196.th.jpg', href: '../foto/foto5.html#slide19', alt: 'preview 19' },
+			{ src: 'https://s2.radikal.cloud/2025/10/03/1000011303dc8b28c7a4855411.th.jpg', href: '../foto/foto5.html#slide20', alt: 'preview 20' },
 			
 		],
 	},
