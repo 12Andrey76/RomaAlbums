@@ -71,7 +71,20 @@ function generateSlides() {
   });
 }
 
+// Видео слайд
 function showSlide(slideId) {
+  // Перед тем, как скрыть все слайды, остановите видео текущего видимого слайда
+  document.querySelectorAll('.row.item').forEach(slide => {
+    if (slide.style.display === 'block') {
+      const iframe = slide.querySelector('iframe');
+      if (iframe) {
+        // Остановка видео - сброс src
+        iframe.setAttribute('data-src', iframe.src); // сохраняем текущий src
+        iframe.src = ''; // отключает воспроизведение
+      }
+    }
+  });
+  
   // Скрыть все слайды
   document.querySelectorAll('.row.item').forEach(slide => {
     slide.style.display = 'none';
@@ -81,8 +94,15 @@ function showSlide(slideId) {
   if (targetSlide) {
     targetSlide.style.display = 'block';
 
+    // После отображения, можно восстановить src для следующего воспроизведения
+    const iframe = targetSlide.querySelector('iframe');
+    if (iframe && iframe.getAttribute('data-src')) {
+      iframe.src = iframe.getAttribute('data-src');
+      iframe.removeAttribute('data-src');
+    }
   }
 }
+// Видео слайд
 
 window.onload = () => {
   generateSlides();
