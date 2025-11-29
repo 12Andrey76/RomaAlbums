@@ -164,7 +164,7 @@ const slides = [
 		title: "Фото 1",
 		block: 1,
 		links: {
-			previous: 20,
+			previous: 22,
 			next: 14,
 			block: "Блок 2",
 			blockPrevious: 1,
@@ -256,6 +256,32 @@ const slides = [
 		block: 1,
 		links: {
 			previous: 19,
+			next: 21,
+			block: "Блок 2",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 21,
+		image: "https://radika1.link/2025/11/29/21d60af99cd1101582.jpg",
+		title: "Фото 9",
+		block: 1,
+		links: {
+			previous: 20,
+			next: 22,
+			block: "Блок 2",
+			blockPrevious: 1,
+			blockNext: 1,
+		}
+	},
+	{
+		id: 22,
+		image: "https://s1.radikal.cloud/2025/11/29/22.2eefd55a2b0488ee2.jpg",
+		title: "Фото 10",
+		block: 1,
+		links: {
+			previous: 21,
 			next: 13,
 			block: "Блок 2",
 			blockPrevious: 1,
