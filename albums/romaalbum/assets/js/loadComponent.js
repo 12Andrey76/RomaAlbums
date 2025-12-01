@@ -154,10 +154,10 @@ const headerHTML = `
   <div class="container">
     <div class="row">
       <div class="foto col-md-3 d-none d-md-block d-lg-block">
-        <img src="https://s3.radikal.cloud/2025/01/26/fotoeffadfbceb7b40f6.png" class="img-thumbnail col-10" alt="картинка">
+        <img src="https://radika1.link/2025/11/30/foto17853372871b0e39.png" class="img-thumbnail col-10" alt="картинка">
       </div>
       <div class="video col-md-3 d-none d-md-block d-lg-block">
-        <img src="https://s3.radikal.cloud/2025/01/26/video92fdaa8d31dcd56b.png" class="img-thumbnail col-10" alt="картинка">
+        <img src="https://s3.radikal.cloud/2025/11/30/videoc4aca0d3b2cf4a19.png" class="img-thumbnail col-10" alt="картинка">
       </div>
       <div class="logo col-md-12">
         <h1><a href="${albumlink}">Альбом Ромы</a></h1>
