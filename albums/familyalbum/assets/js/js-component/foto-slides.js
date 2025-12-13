@@ -7,36 +7,120 @@ function generateSlides() {
 		slideDiv.style.display = index === 0 ? 'block' : 'none'; 
 
 		// Создаем навигацию для блоков (вверху)
+		const blockNavContainer = document.createElement('div');
+		blockNavContainer.className = "container";
 		const blockNavDiv = document.createElement('div');
-		blockNavDiv.className = "container";
-		blockNavDiv.innerHTML = `
-			<div class="row">
-				<div class="col-3">
-					<div class="block_album">${slide.links.blockPrevious ? `<a href="#slide${slide.links.blockPrevious}" class="prev-block" data-target="slide${slide.links.blockPrevious}">&lt;</a>` : ''}</div>
-				</div>
-				<div class="col-6">
-					<div class="block_album"><h3>${slide.links.block}</h3></div>
-				</div>
-				<div class="col-3">
-					<div class="block_album">${slide.links.blockNext ? `<a href="#slide${slide.links.blockNext}" class="next-block" data-target="slide${slide.links.blockNext}">&gt;</a>` : ''}</div>
-				</div>
-			</div>`;
+		blockNavDiv.className = "navigation row";
+
+		// Кнопка "Предыдущий блок"
+		const prevBlockCol = document.createElement('div');
+		prevBlockCol.className = 'col-3';
+		const prevBlockSlide = document.createElement('div');
+		prevBlockSlide.className = 'block_album';
+		if (slide.links.blockPrevious) {
+			const prevBlockButton = document.createElement('a');
+			prevBlockButton.href = '#';
+			prevBlockButton.textContent = '<';
+			prevBlockButton.className = 'prev-block';
+			prevBlockButton.onclick = (event) => {
+				event.preventDefault();
+				showSlide(`slide${slide.links.blockPrevious}`);
+				history.pushState(null, null, `#slide${slide.links.blockPrevious}`);
+			};
+			prevBlockSlide.appendChild(prevBlockButton);
+		}
+		prevBlockCol.appendChild(prevBlockSlide);
+		blockNavDiv.appendChild(prevBlockCol);
+
+		// Заголовок блока
+		const headerBlockCol = document.createElement('div');
+		headerBlockCol.className = 'col-6';
+		const headerBlockSlide = document.createElement('div');
+		headerBlockSlide.className = 'block_album';
+		const headerBlock = document.createElement('h3');
+		headerBlock.textContent = slide.links.block;
+		headerBlockSlide.appendChild(headerBlock);
+		headerBlockCol.appendChild(headerBlockSlide);
+		blockNavDiv.appendChild(headerBlockCol);
+
+		// Кнопка "Следующий блок"
+		const nextBlockCol = document.createElement('div');
+		nextBlockCol.className = 'col-3';
+		const nextBlockSlide = document.createElement('div');
+		nextBlockSlide.className = 'block_album';
+		if (slide.links.blockNext) {
+			const nextBlockButton = document.createElement('a');
+			nextBlockButton.href = '#';
+			nextBlockButton.textContent = '>';
+			nextBlockButton.className = 'next-block';
+			nextBlockButton.onclick = (event) => {
+				event.preventDefault();
+				showSlide(`slide${slide.links.blockNext}`);
+				history.pushState(null, null, `#slide${slide.links.blockNext}`);
+			};
+			nextBlockSlide.appendChild(nextBlockButton);
+		}
+		nextBlockCol.appendChild(nextBlockSlide);
+		blockNavDiv.appendChild(nextBlockCol);
+		blockNavContainer.appendChild(blockNavDiv);
 
 		// Создаем навигацию для слайдов (под блоками)
+		const slideNavContainer = document.createElement('div');
+		slideNavContainer.className = "container";
 		const slideNavDiv = document.createElement('div');
-		slideNavDiv.className = "container";
-		slideNavDiv.innerHTML = `
-			<div class="row">
-				<div class="col-3">
-					<div class="slide_album">${slide.links.previous ? `<a href="#slide${slide.links.previous}" class="prev-slide" data-target="slide${slide.links.previous}">&lt;</a>` : ''}</div>
-				</div>
-				<div class="col-6">
-					<div class="slide_album"><h3>${slide.title}</h3></div>
-				</div>
-				<div class="col-3">
-					<div class="slide_album">${slide.links.next ? `<a href="#slide${slide.links.next}" class="next-slide" data-target="slide${slide.links.next}">&gt;</a>` : ''}</div>
-				</div>
-			</div>`;
+		slideNavDiv.className = "navigation row";
+
+		// Кнопка "Предыдущий слайд"
+		const prevSlideCol = document.createElement('div');
+		prevSlideCol.className = 'col-3';
+		const prevSlideSlide = document.createElement('div');
+		prevSlideSlide.className = 'slide_album';
+		if (slide.links.previous) {
+			const prevSlideButton = document.createElement('a');
+			prevSlideButton.href = '#';
+			prevSlideButton.textContent = '<';
+			prevSlideButton.className = 'prev-slide';
+			prevSlideButton.onclick = (event) => {
+				event.preventDefault();
+				showSlide(`slide${slide.links.previous}`);
+				history.pushState(null, null, `#slide${slide.links.previous}`);
+			};
+			prevSlideSlide.appendChild(prevSlideButton);
+		}
+		prevSlideCol.appendChild(prevSlideSlide);
+		slideNavDiv.appendChild(prevSlideCol);
+
+		// Заголовок слайда
+		const headerSlideCol = document.createElement('div');
+		headerSlideCol.className = 'col-6';
+		const headerSlideSlide = document.createElement('div');
+		headerSlideSlide.className = 'slide_album';
+		const headerSlide = document.createElement('h3');
+		headerSlide.textContent = slide.title;
+		headerSlideSlide.appendChild(headerSlide);
+		headerSlideCol.appendChild(headerSlideSlide);
+		slideNavDiv.appendChild(headerSlideCol);
+
+		// Кнопка "Следующий слайд"
+		const nextSlideCol = document.createElement('div');
+		nextSlideCol.className = 'col-3';
+		const nextSlideSlide = document.createElement('div');
+		nextSlideSlide.className = 'slide_album';
+		if (slide.links.next) {
+			const nextSlideButton = document.createElement('a');
+			nextSlideButton.href = '#';
+			nextSlideButton.textContent = '>';
+			nextSlideButton.className = 'next-slide';
+			nextSlideButton.onclick = (event) => {
+				event.preventDefault();
+				showSlide(`slide${slide.links.next}`);
+				history.pushState(null, null, `#slide${slide.links.next}`);
+			};
+			nextSlideSlide.appendChild(nextSlideButton);
+		}
+		nextSlideCol.appendChild(nextSlideSlide);
+		slideNavDiv.appendChild(nextSlideCol);
+		slideNavContainer.appendChild(slideNavDiv);
 
 			// Создаем контейнер для изображения и добавляем его в слайд
 		const imageElement = document.createElement('img');
@@ -47,8 +131,8 @@ function generateSlides() {
 		imageContainer.appendChild(imageElement);
 
 		// Сначала добавляем блок навигации, затем навигацию для слайдов, и в конце изображение
-		slideDiv.appendChild(blockNavDiv); // Навигация по блокам      
-		slideDiv.appendChild(slideNavDiv); // Навигация по слайдам
+		slideDiv.appendChild(blockNavContainer); // Навигация по блокам      
+		slideDiv.appendChild(slideNavContainer); // Навигация по слайдам
 		container.appendChild(slideDiv);
 		slideDiv.appendChild(imageContainer); // Изображение
   });
@@ -69,21 +153,6 @@ function showSlide(slideId) {
 
 window.onload = () => {
   generateSlides();
-
-  // Обработчики событий для кнопок слайдов и блоков
-  document.querySelectorAll('.prev-slide, .next-slide, .prev-block, .next-block').forEach(button => {
-		button.addEventListener('click', (event) => {
-			event.preventDefault(); // Предотвращаем стандартное поведение ссылки
-			const targetId = button.getAttribute('data-target');
-
-			// Показать целевой слайд
-			if (targetId) {
-				showSlide(targetId);
-				// Меняем хэш в URL, чтобы отобразить правильный слайд
-				history.pushState(null, null, `#${targetId}`);
-			}
-		});
-  });
 
   // Обработка перехода по якорным ссылкам при загрузке
   const hash = window.location.hash.slice(1); // Убираем #

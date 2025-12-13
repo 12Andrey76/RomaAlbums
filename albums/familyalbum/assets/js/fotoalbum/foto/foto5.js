@@ -1,296 +1,94 @@
-const slides = [
-// ============####block1####=================
-	{
-		id: 1,
-		image: "https://s2.radikal.cloud/2025/04/22/1b5bc6e786501801a.jpg",
-		title: "Фото 1",
-		block: 1,
-		links: {
-			previous: 12,
-			next: 2,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
+// Функция для автоматического вычисления связей
+function generateSlidesFromData(slidesData) {
+	const slides = [];
+	const blockMap = {}; // Карта блоков: blockNumber -> { firstId, lastId, blockName }
+
+	// Первый проход: создаем карту блоков
+	slidesData.forEach(slide => {
+		if (!blockMap[slide.block]) {
+			blockMap[slide.block] = {
+				firstId: slide.id,
+				lastId: slide.id,
+				blockName: slide.blockName
+			};
+		} else {
+			blockMap[slide.block].lastId = slide.id;
 		}
-	},
-	{
-		id: 2,
-		image: "https://s2.radikal.cloud/2025/04/22/222b433e76ac36e0d.jpg",
-		title: "Фото 2",
-		block: 1,
-		links: {
-			previous: 1,
-			next: 3,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 3,
-		image: "https://s2.radikal.cloud/2025/05/01/3b316f8ce6b20006c.jpg",
-		title: "Фото 3",
-		block: 1,
-		links: {
-			previous: 2,
-			next: 4,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 4,
-		image: "https://s2.radikal.cloud/2025/05/01/4048524a7cc50f79a.jpg",
-		title: "Фото 4",
-		block: 1,
-		links: {
-			previous: 3,
-			next: 5,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 5,
-		image: "https://s2.radikal.cloud/2025/05/01/599ec7c965db4ae46.jpg",
-		title: "Фото 5",
-		block: 1,
-		links: {
-			previous: 4,
-			next: 6,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 6,
-		image: "https://s2.radikal.cloud/2025/05/01/6cac88528ce9ed8c6.jpg",
-		title: "Фото 6",
-		block: 1,
-		links: {
-			previous: 5,
-			next: 7,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 7,
-		image: "https://s2.radikal.cloud/2025/05/01/75fbdc53076d7d94a.jpg",
-		title: "Фото 7",
-		block: 1,
-		links: {
-			previous: 6,
-			next: 8,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 8,
-		image: "https://s2.radikal.cloud/2025/05/01/8aa3ec5e19ea0d661.jpg",
-		title: "Фото 8",
-		block: 1,
-		links: {
-			previous: 7,
-			next: 9,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 9,
-		image: "https://s2.radikal.cloud/2025/05/01/9c1def78b826dc862.jpg",
-		title: "Фото 9",
-		block: 1,
-		links: {
-			previous: 8,
-			next: 10,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 10,
-		image: "https://s1.radikal.cloud/2025/05/19/106b4e361664fe2d46.jpg",
-		title: "Фото 10",
-		block: 1,
-		links: {
-			previous: 9,
-			next: 11,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 11,
-		image: "https://s1.radikal.cloud/2025/05/19/111f2216470c4e0040.jpg",
-		title: "Фото 11",
-		block: 1,
-		links: {
-			previous: 10,
-			next: 12,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	{
-		id: 12,
-		image: "https://s3.radikal.cloud/2025/07/06/125ec038bb6dcabd7b.jpg",
-		title: "Фото 12",
-		block: 1,
-		links: {
-			previous: 11,
-			next: 1,
-			block: "Блок 1",
-			blockPrevious: 13,
-			blockNext: 13,
-		}
-	},
-	
-// ============####block2####=================
-	{
-		id: 13,
-		image: "https://s3.radikal.cloud/2025/07/06/132eece640714142ae.jpg",
-		title: "Фото 1",
-		block: 1,
-		links: {
-			previous: 22,
-			next: 14,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-	{
-		id: 14,
-		image: "https://s3.radikal.cloud/2025/07/06/14a72b1a9303e07e95.jpg",
-		title: "Фото 2",
-		block: 1,
-		links: {
-			previous: 13,
-			next: 15,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-	{
-		id: 15,
-		image: "https://s3.radikal.cloud/2025/07/07/15274113fff7b61b07.jpg",
-		title: "Фото 3",
-		block: 1,
-		links: {
-			previous: 14,
-			next: 16,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-	{
-		id: 16,
-		image: "https://s3.radikal.cloud/2025/07/07/16c182c2609972dca8.jpg",
-		title: "Фото 4",
-		block: 1,
-		links: {
-			previous: 15,
-			next: 17,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-	{
-		id: 17,
-		image: "https://s3.radikal.cloud/2025/07/07/171c7925c0a0fb7fac.jpg",
-		title: "Фото 5",
-		block: 1,
-		links: {
-			previous: 16,
-			next: 18,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-	{
-		id: 18,
-		image: "https://s3.radikal.cloud/2025/07/07/18e9a5edfd6ffc8e36.jpg",
-		title: "Фото 6",
-		block: 1,
-		links: {
-			previous: 17,
-			next: 19,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
- {
-		id: 19,
-		image: "https://s2.radikal.cloud/2025/10/01/1000010471d3d9bf1a18edd196.jpg",
-		title: "Фото 7",
-		block: 1,
-		links: {
-			previous: 18,
-			next: 20,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-	{
-		id: 20,
-		image: "https://s2.radikal.cloud/2025/10/03/1000011303dc8b28c7a4855411.jpg",
-		title: "Фото 8",
-		block: 1,
-		links: {
-			previous: 19,
-			next: 21,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-	{
-		id: 21,
-		image: "https://radika1.link/2025/11/29/21d60af99cd1101582.jpg",
-		title: "Фото 9",
-		block: 1,
-		links: {
-			previous: 20,
-			next: 22,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-	{
-		id: 22,
-		image: "https://s1.radikal.cloud/2025/11/29/22.2eefd55a2b0488ee2.jpg",
-		title: "Фото 10",
-		block: 1,
-		links: {
-			previous: 21,
-			next: 13,
-			block: "Блок 2",
-			blockPrevious: 1,
-			blockNext: 1,
-		}
-	},
-// ============####block3####=================
-	
+	});
+
+	// Второй проход: создаем полные объекты слайдов
+	slidesData.forEach((slide, index) => {
+		const blockInfo = blockMap[slide.block];
+		const blockSlides = slidesData.filter(s => s.block === slide.block);
+		const currentIndexInBlock = blockSlides.findIndex(s => s.id === slide.id);
+
+		// Вычисляем previous и next в блоке (циклически)
+		const prevInBlock = currentIndexInBlock > 0
+			? blockSlides[currentIndexInBlock - 1].id
+			: blockSlides[blockSlides.length - 1].id;
+		const nextInBlock = currentIndexInBlock < blockSlides.length - 1
+			? blockSlides[currentIndexInBlock + 1].id
+			: blockSlides[0].id;
+
+		// Вычисляем blockPrevious и blockNext
+		const blockNumbers = Object.keys(blockMap).map(Number).sort((a, b) => a - b);
+		const currentBlockIndex = blockNumbers.indexOf(slide.block);
+		const prevBlock = currentBlockIndex > 0 ? blockNumbers[currentBlockIndex - 1] : blockNumbers[blockNumbers.length - 1];
+		const nextBlock = currentBlockIndex < blockNumbers.length - 1 ? blockNumbers[currentBlockIndex + 1] : blockNumbers[0];
+
+		const blockPrevious = blockMap[prevBlock] ? blockMap[prevBlock].firstId : null;
+		const blockNext = blockMap[nextBlock] ? blockMap[nextBlock].firstId : null;
+
+		// Создаем полный объект слайда
+		const fullSlide = {
+			id: slide.id,
+			image: slide.image,
+			title: `Фото ${currentIndexInBlock + 1}`,
+			block: slide.block,
+			links: {
+				previous: prevInBlock,
+				next: nextInBlock,
+				block: blockInfo.blockName,
+				blockPrevious: blockPrevious,
+				blockNext: blockNext,
+			}
+		};
+
+		slides.push(fullSlide);
+	});
+
+	return slides;
+}
+
+const slidesData = [
+	// ============####block1####=================
+	{ id: 1, image: "https://s2.radikal.cloud/2025/04/22/1b5bc6e786501801a.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 2, image: "https://s2.radikal.cloud/2025/04/22/222b433e76ac36e0d.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 3, image: "https://s2.radikal.cloud/2025/05/01/3b316f8ce6b20006c.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 4, image: "https://s2.radikal.cloud/2025/05/01/4048524a7cc50f79a.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 5, image: "https://s2.radikal.cloud/2025/05/01/599ec7c965db4ae46.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 6, image: "https://s2.radikal.cloud/2025/05/01/6cac88528ce9ed8c6.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 7, image: "https://s2.radikal.cloud/2025/05/01/75fbdc53076d7d94a.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 8, image: "https://s2.radikal.cloud/2025/05/01/8aa3ec5e19ea0d661.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 9, image: "https://s2.radikal.cloud/2025/05/01/9c1def78b826dc862.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 10, image: "https://s1.radikal.cloud/2025/05/19/106b4e361664fe2d46.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 11, image: "https://s1.radikal.cloud/2025/05/19/111f2216470c4e0040.jpg", block: 1, blockName: "Блок 1" },
+	{ id: 12, image: "https://s3.radikal.cloud/2025/07/06/125ec038bb6dcabd7b.jpg", block: 1, blockName: "Блок 1" },
+	// ============####block2####=================
+	{ id: 13, image: "https://s3.radikal.cloud/2025/07/06/132eece640714142ae.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 14, image: "https://s3.radikal.cloud/2025/07/06/14a72b1a9303e07e95.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 15, image: "https://s3.radikal.cloud/2025/07/07/15274113fff7b61b07.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 16, image: "https://s3.radikal.cloud/2025/07/07/16c182c2609972dca8.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 17, image: "https://s3.radikal.cloud/2025/07/07/171c7925c0a0fb7fac.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 18, image: "https://s3.radikal.cloud/2025/07/07/18e9a5edfd6ffc8e36.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 19, image: "https://s2.radikal.cloud/2025/10/01/1000010471d3d9bf1a18edd196.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 20, image: "https://s2.radikal.cloud/2025/10/03/1000011303dc8b28c7a4855411.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 21, image: "https://radika1.link/2025/11/29/21d60af99cd1101582.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 22, image: "https://s1.radikal.cloud/2025/11/29/22.2eefd55a2b0488ee2.jpg", block: 2, blockName: "Блок 2" },
 ];
+
+// Генерируем полный массив slides из упрощенной структуры
+const slides = generateSlidesFromData(slidesData);
 
 function loadScript(url) {
 	return new Promise((resolve, reject) => {
