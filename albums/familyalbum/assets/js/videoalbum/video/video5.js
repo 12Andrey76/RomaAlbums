@@ -67,6 +67,7 @@ const slidesData = [
 	{ id: 4, video: "https://rutube.ru/play/embed/8c0feabdb908efa7abf34385689959a0/?p=xm6IP2-WhSfrIXw6ZkxybQ", block: 1, blockName: "Блок 1" },
 	{ id: 5, video: "https://rutube.ru/play/embed/bdc098485237ee3108719e50f51aa12e/?p=FObc4Wgbp0jUTTH7oSVsQA", block: 1, blockName: "Блок 1" },
 	{ id: 6, video: "https://rutube.ru/play/embed/ab9f8fa3667d468120d0419386594b8b/?p=d7XNDyIC3oNfhXwIYTBuRQ", block: 1, blockName: "Блок 1" },
+	{ id: 7, video: "https://rutube.ru/play/embed/3e07ffb51f71e58cc335b20638bade4b/?p=wGqFHJhqYSlT-KmiYzsiEQ", block: 1, blockName: "Блок 1" },
 ];
 
 // Генерируем полный массив slides из упрощенной структуры

@@ -29,7 +29,18 @@ const albums = [
 			{ src: 'https://s2.radikal.cloud/2025/10/03/1000011303dc8b28c7a4855411.th.jpg', href: '../foto/foto5.html#slide20', alt: 'preview 20' },
 			{ src: 'https://radika1.link/2025/11/29/21d60af99cd1101582.th.jpg', href: '../foto/foto5.html#slide21', alt: 'preview 21' },
 			{ src: 'https://s1.radikal.cloud/2025/11/29/22.2eefd55a2b0488ee2.th.jpg', href: '../foto/foto5.html#slide22', alt: 'preview 22' },
+			{ src: 'https://radika1.link/2025/12/27/233a1c20f2a6c3754b.th.jpg', href: '../foto/foto5.html#slide23', alt: 'preview 23' },
+			{ src: 'https://radika1.link/2025/12/27/246e2f9f2925e77e33.th.jpg', href: '../foto/foto5.html#slide24', alt: 'preview 24' },
 			
+		],
+	},
+	{
+		title: 'Блок #3',
+		images: [
+			{ src: 'https://s1.radikal.cloud/2025/12/27/250bc68d5613719b4b.th.jpg', href: '../foto/foto5.html#slide25', alt: 'preview 25' },
+			{ src: 'https://s1.radikal.cloud/2025/12/27/269d8487c71932ef0c.th.jpg', href: '../foto/foto5.html#slide26', alt: 'preview 26' },
+			{ src: 'https://radika1.link/2025/12/27/27e7ca45348b87cfd1.th.jpg', href: '../foto/foto5.html#slide27', alt: 'preview 27' },
+			{ src: 'https://s2.radikal.cloud/2025/12/27/28080321e655840631.th.jpg', href: '../foto/foto5.html#slide28', alt: 'preview 28' },
 		],
 	},
 	

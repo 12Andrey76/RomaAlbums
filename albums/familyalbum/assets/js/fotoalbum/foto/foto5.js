@@ -85,6 +85,13 @@ const slidesData = [
 	{ id: 20, image: "https://s2.radikal.cloud/2025/10/03/1000011303dc8b28c7a4855411.jpg", block: 2, blockName: "Блок 2" },
 	{ id: 21, image: "https://radika1.link/2025/11/29/21d60af99cd1101582.jpg", block: 2, blockName: "Блок 2" },
 	{ id: 22, image: "https://s1.radikal.cloud/2025/11/29/22.2eefd55a2b0488ee2.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 23, image: "https://radika1.link/2025/12/27/233a1c20f2a6c3754b.jpg", block: 2, blockName: "Блок 2" },
+	{ id: 24, image: "https://radika1.link/2025/12/27/246e2f9f2925e77e33.jpg", block: 2, blockName: "Блок 2" },
+	// ============####block3####=================
+	{ id: 25, image: "https://s1.radikal.cloud/2025/12/27/250bc68d5613719b4b.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 26, image: "https://s1.radikal.cloud/2025/12/27/269d8487c71932ef0c.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 27, image: "https://radika1.link/2025/12/27/27e7ca45348b87cfd1.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 28, image: "https://s2.radikal.cloud/2025/12/27/28080321e655840631.jpg", block: 3, blockName: "Блок 3" },
 ];
 
 // Генерируем полный массив slides из упрощенной структуры

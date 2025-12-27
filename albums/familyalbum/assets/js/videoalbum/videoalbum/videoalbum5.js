@@ -8,6 +8,7 @@ const albums = [
 			{ src: 'https://radika1.link/2025/07/27/100000590307468f2b575fbcb6.th.jpg', href: '../video/video5.html#slide4', alt: 'preview 4' },
 			{ src: 'https://radika1.link/2025/07/27/1000005904f906737928cc8ecf.th.jpg', href: '../video/video5.html#slide5', alt: 'preview 5' },
 			{ src: 'https://s2.radikal.cloud/2025/11/29/6ddd176f123621440.th.jpg', href: '../video/video5.html#slide6', alt: 'preview 6' },
+			{ src: 'https://radika1.link/2025/12/27/74bd91f6b0722ec50.th.jpg', href: '../video/video5.html#slide7', alt: 'preview 7' },
 
 		],
 	},
