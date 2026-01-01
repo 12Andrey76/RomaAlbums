@@ -92,6 +92,21 @@ const slidesData = [
 	{ id: 26, image: "https://s1.radikal.cloud/2025/12/27/269d8487c71932ef0c.jpg", block: 3, blockName: "Блок 3" },
 	{ id: 27, image: "https://radika1.link/2025/12/27/27e7ca45348b87cfd1.jpg", block: 3, blockName: "Блок 3" },
 	{ id: 28, image: "https://s2.radikal.cloud/2025/12/27/28080321e655840631.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 29, image: "https://s2.radikal.cloud/2026/01/01/29583a912f5ab9ed69.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 30, image: "https://s2.radikal.cloud/2026/01/01/304c82e1f2e8799b05.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 31, image: "https://radika1.link/2026/01/01/31b76dc3f8eb474240.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 32, image: "https://s1.radikal.cloud/2026/01/01/32e63e7ef635fe9569.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 33, image: "https://radika1.link/2026/01/01/334850ce775b4ccc83.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 34, image: "https://radika1.link/2026/01/01/34e070403daf53da5d.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 35, image: "https://radika1.link/2026/01/01/3524810950b4158929.jpg", block: 3, blockName: "Блок 3" },
+	{ id: 36, image: "https://s2.radikal.cloud/2026/01/01/369ac33f2d2f6f712d.jpg", block: 3, blockName: "Блок 3" },
+	// ============####block4####=================
+	{ id: 37, image: "https://s2.radikal.cloud/2026/01/01/3784ad286e8e3724f6.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 38, image: "https://radika1.link/2026/01/01/384c7a68e0cb2b23ea.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 39, image: "https://radika1.link/2026/01/01/3913054f670e6a72db.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 40, image: "https://s2.radikal.cloud/2026/01/01/40eaf532b4bbc631b7.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 41, image: "https://s1.radikal.cloud/2026/01/01/41aacb58b7c6d4647c.jpg", block: 4, blockName: "Блок 4" },
+
 ];
 
 // Генерируем полный массив slides из упрощенной структуры
