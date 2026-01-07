@@ -101,11 +101,16 @@ const slidesData = [
 	{ id: 35, image: "https://radika1.link/2026/01/01/3524810950b4158929.jpg", block: 3, blockName: "Блок 3" },
 	{ id: 36, image: "https://s2.radikal.cloud/2026/01/01/369ac33f2d2f6f712d.jpg", block: 3, blockName: "Блок 3" },
 	// ============####block4####=================
-	{ id: 37, image: "https://s2.radikal.cloud/2026/01/01/3784ad286e8e3724f6.jpg", block: 4, blockName: "Блок 4" },
-	{ id: 38, image: "https://radika1.link/2026/01/01/384c7a68e0cb2b23ea.jpg", block: 4, blockName: "Блок 4" },
-	{ id: 39, image: "https://radika1.link/2026/01/01/3913054f670e6a72db.jpg", block: 4, blockName: "Блок 4" },
-	{ id: 40, image: "https://s2.radikal.cloud/2026/01/01/40eaf532b4bbc631b7.jpg", block: 4, blockName: "Блок 4" },
-	{ id: 41, image: "https://s1.radikal.cloud/2026/01/01/41aacb58b7c6d4647c.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 37, image: "https://radika1.link/2026/01/07/3768b0def463f18681.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 38, image: "https://s2.radikal.cloud/2026/01/07/385ec0116cb4e84e23.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 39, image: "https://s1.radikal.cloud/2026/01/07/397af88d9121c1b0ef.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 40, image: "https://radika1.link/2026/01/07/402ad3b137659f0640.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 41, image: "https://s1.radikal.cloud/2026/01/07/41a8b75002505e8430.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 42, image: "https://radika1.link/2026/01/07/42023e3c4c78aebffe.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 43, image: "https://radika1.link/2026/01/07/4340e3e4e27ea2732b.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 44, image: "https://radika1.link/2026/01/07/44fac0e884366cbc57.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 45, image: "https://radika1.link/2026/01/07/452fb34d7db7fd51a1.jpg", block: 4, blockName: "Блок 4" },
+	{ id: 46, image: "https://radika1.link/2026/01/07/4646d24e0ffda4a43e.jpg", block: 4, blockName: "Блок 4" },
 
 ];
 
