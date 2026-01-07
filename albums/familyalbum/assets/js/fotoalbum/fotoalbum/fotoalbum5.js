@@ -59,11 +59,20 @@ const albums = [
 			{ src: 'https://s1.radikal.cloud/2026/01/07/397af88d9121c1b0ef.th.jpg', href: '../foto/foto5.html#slide39', alt: 'preview 39' },
 			{ src: 'https://radika1.link/2026/01/07/402ad3b137659f0640.th.jpg', href: '../foto/foto5.html#slide40', alt: 'preview 40' },
 			{ src: 'https://s1.radikal.cloud/2026/01/07/41a8b75002505e8430.th.jpg', href: '../foto/foto5.html#slide41', alt: 'preview 41' },
-			{ src: 'https://radika1.link/2026/01/07/42023e3c4c78aebffe.th.jpg', href: '../foto/foto5.html#slide37', alt: 'preview 37' },
-			{ src: 'https://radika1.link/2026/01/07/4340e3e4e27ea2732b.th.jpg', href: '../foto/foto5.html#slide38', alt: 'preview 38' },
-			{ src: 'https://radika1.link/2026/01/07/44fac0e884366cbc57.th.jpg', href: '../foto/foto5.html#slide39', alt: 'preview 39' },
-			{ src: 'https://radika1.link/2026/01/07/452fb34d7db7fd51a1.th.jpg', href: '../foto/foto5.html#slide40', alt: 'preview 40' },
-			{ src: 'https://radika1.link/2026/01/07/4646d24e0ffda4a43e.th.jpg', href: '../foto/foto5.html#slide41', alt: 'preview 41' },
+			{ src: 'https://radika1.link/2026/01/07/42023e3c4c78aebffe.th.jpg', href: '../foto/foto5.html#slide42', alt: 'preview 42' },
+			{ src: 'https://radika1.link/2026/01/07/4340e3e4e27ea2732b.th.jpg', href: '../foto/foto5.html#slide43', alt: 'preview 43' },
+			{ src: 'https://radika1.link/2026/01/07/44fac0e884366cbc57.th.jpg', href: '../foto/foto5.html#slide44', alt: 'preview 44' },
+			{ src: 'https://radika1.link/2026/01/07/452fb34d7db7fd51a1.th.jpg', href: '../foto/foto5.html#slide45', alt: 'preview 45' },
+			{ src: 'https://radika1.link/2026/01/07/4646d24e0ffda4a43e.th.jpg', href: '../foto/foto5.html#slide46', alt: 'preview 46' },
+			{ src: 'https://radika1.link/2026/01/07/4708866fc592b8057a.th.jpg', href: '../foto/foto5.html#slide47', alt: 'preview 47' },
+			{ src: 'https://s1.radikal.cloud/2026/01/07/488160320473c4946a.th.jpg', href: '../foto/foto5.html#slide48', alt: 'preview 48' },
+		],
+	},
+	{
+		title: 'Блок #5',
+		images: [
+			{ src: 'https://radika1.link/2026/01/07/494dc1a372ffcebe01.th.jpg', href: '../foto/foto5.html#slide49', alt: 'preview 49' },
+			
 		],
 	},
 	
