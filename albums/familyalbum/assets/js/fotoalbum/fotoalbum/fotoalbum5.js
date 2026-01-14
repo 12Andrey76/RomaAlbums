@@ -72,7 +72,10 @@ const albums = [
 		title: 'Блок #5',
 		images: [
 			{ src: 'https://radika1.link/2026/01/07/494dc1a372ffcebe01.th.jpg', href: '../foto/foto5.html#slide49', alt: 'preview 49' },
-			
+			{ src: 'https://radika1.link/2026/01/14/50a0f62b345079c72d.th.jpg', href: '../foto/foto5.html#slide50', alt: 'preview 50' },
+			{ src: 'https://radika1.link/2026/01/14/51c54e7d8256f6aff2.th.jpg', href: '../foto/foto5.html#slide51', alt: 'preview 51' },
+			{ src: 'https://radika1.link/2026/01/14/52df8ec56773079467.th.jpg', href: '../foto/foto5.html#slide52', alt: 'preview 52' },
+
 		],
 	},
 	

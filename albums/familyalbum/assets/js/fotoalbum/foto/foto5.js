@@ -115,6 +115,9 @@ const slidesData = [
 	{ id: 48, image: "https://s1.radikal.cloud/2026/01/07/488160320473c4946a.jpg", block: 4, blockName: "Блок 4" },
 	// ============####block5####=================
 	{ id: 49, image: "https://radika1.link/2026/01/07/494dc1a372ffcebe01.jpg", block: 5, blockName: "Блок 5" },
+	{ id: 50, image: "https://radika1.link/2026/01/14/50a0f62b345079c72d.jpg", block: 5, blockName: "Блок 5" },
+	{ id: 51, image: "https://radika1.link/2026/01/14/51c54e7d8256f6aff2.jpg", block: 5, blockName: "Блок 5" },
+	{ id: 52, image: "https://radika1.link/2026/01/14/52df8ec56773079467.jpg", block: 5, blockName: "Блок 5" },
 
 ];
 
