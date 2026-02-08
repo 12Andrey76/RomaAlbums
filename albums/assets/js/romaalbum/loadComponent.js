@@ -16,7 +16,7 @@ if (currentPage.includes("album.html") && !currentPage.includes("photoalbum") &&
 // ========== Фотоальбом (обзор) ==========
 } else if (currentPage.includes("photoalbum/photoalbum.html")) {
 	albumlink = "../album.html";
-	baseLink = "../../../../index.html";
+	baseLink = "../../../index.html";
 	albumTitle = "Фотоальбом";
 	prevAlbumLink = "photo/photo12.html";
 	nextAlbumLink = "photo/photo1.html";
@@ -98,7 +98,7 @@ if (currentPage.includes("album.html") && !currentPage.includes("photoalbum") &&
 // ========== Видеоальбом (обзор) ==========
 } else if (currentPage.includes("videoalbum/videoalbum.html")) {
 	albumlink = "../album.html";
-	baseLink = "../../../../index.html";
+	baseLink = "../../../index.html";
 	albumTitle = "Видеоальбом";
 	prevAlbumLink = "video/video9.html";
 	nextAlbumLink = "video/video1.html";
