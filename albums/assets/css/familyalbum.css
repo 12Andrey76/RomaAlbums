@@ -1,0 +1,238 @@
+.container-fluid, .header {
+	background-color: #090c7a;
+	margin-bottom: 20px;
+}
+
+body {
+  background-color: #14458e;
+}
+
+.preview img {
+  border-radius: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo a {
+	color: white;
+	letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.logo h1 {
+	margin: 20px;
+}
+
+.menu_album a:hover, .logo a:hover {
+	color: blue;
+}
+
+.content img {
+	width: 100%;
+}
+
+.content {
+	min-height: 100vh;
+	margin-bottom: 5%;
+}
+
+.album, .cover  {
+  height: 67px;
+  background-color: gold;
+  border: solid 5px white;
+  border-radius: 10px;
+  color: green;
+  margin-bottom: 25px;
+}
+
+.cover a {
+	text-decoration: none;
+}
+
+.cover {padding-top: 7px;}
+
+.album a {
+	color: black;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+.album p {
+  font-size: 20px;
+	font-weight: bold;
+	padding-top: 15px;
+}
+
+.album-left, .album-right {
+	height: 67px;
+	width: 100%;
+  background-color: gold;
+  border: solid 5px white;
+  border-radius: 10px;
+}
+
+.album-left p, .album-right p {
+  font-size: 35px;
+}
+
+.album-left a, .album-right a {
+	color: black;
+}
+
+.menu_album {
+	background-color: gold;
+	border: solid 5px white;
+  border-radius: 5px;
+	font-size: 150%;
+	margin-bottom: 25px;
+}
+
+.menu_album a {
+	text-decoration: none;
+	color: green;
+}
+
+.watch_album {
+	background-color: #6d76f3;
+	border-radius: 10px;
+	margin-bottom: 24px;
+	margin-left: 27%;
+	padding: 10px 0 5px 0;
+	height: 67px;
+	width: 47%;
+}
+
+.watch_album h2 {
+  font-size: 140%;
+  color: white;
+  padding-top: 10px;
+}
+
+.watch_album a, .watch_album p {
+	text-decoration: none;
+	color: white;
+	font-size: 28px;
+}
+
+.albummenu img {
+	border-radius: 100%;
+}
+
+iframe {
+	border-radius: 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+	background-color: black;
+}
+
+.carousel-indicators {
+	margin-bottom: -30px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  height: 67px;
+	width: 22%;
+	border-radius: 10px;
+	background-color: #c1c7f1;
+}
+
+.carousel-inner img {
+	margin-bottom: 20px;
+}
+
+.card-body a {
+	text-decoration: none;
+	color: black;
+}
+
+.card-body {
+  background-color: gold;
+  border: 5px solid #ddd;
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.card-body a:hover {
+	color: #1111e0;
+}
+
+.card-body a.active, p.active {
+	color: #07c225;
+}
+
+.card {
+	border: none;
+}
+
+.mb-3 {
+	margin-bottom: 25px !important;
+}
+
+.menu {
+  border-radius: 100%;
+  height: 200px;
+}
+
+.btn-outline-success {
+  --bs-btn-color: ##08110d;
+  --bs-btn-border-color: #eef6f2;
+}
+
+.img_label {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.lables {
+	margin-top: 60px;
+	font-size: 18px;
+}
+
+.lables a {
+	color: black;
+}
+
+footer {
+	background-color: #0e1cc5;
+	color: white;
+	padding: 25px 0 20px 0;
+}
+
+footer h1 {
+	font-size: 22px;
+}
+
+@media (max-device-width : 768px) {
+
+	.cover {
+		padding-top: 3%;
+	}
+
+	.album_head h1 {
+		font-size: 200%;
+		padding-top: 2%;
+	}
+
+	.album p {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+
+	.watch_album a {
+		font-size: 120%;
+	}
+
+	.watch_album h2 {
+		padding-top: 5px;
+		font-size: 175%
+	}
+
+	.menu_album {
+    font-size: 175%;
+}
+
+}

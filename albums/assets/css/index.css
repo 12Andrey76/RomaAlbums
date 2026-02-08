@@ -1,0 +1,51 @@
+.album1 img, .album2 img {
+  border: solid 5px gold;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+body {
+  background-color: #009bff;
+}
+
+.menu_album {
+	background-color: #59ff3f;
+  font-size: 150%;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 25px;
+  padding: 5px 5px;
+}
+
+.menu_album2 {
+	background-color: gold;
+	border: solid 5px white;
+  border-radius: 5px;
+	font-size: 150%;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.menu_album a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu_album2 a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu_album a:hover, .menu_album2 a:hover {
+	color: blue;
+}
+
+@media (max-device-width : 768px) {
+
+  .menu_album, .menu_album2 {
+    font-size: 200%;
+  }
+
+}
