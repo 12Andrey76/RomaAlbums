@@ -175,7 +175,7 @@ if (currentPage.includes("album.html")) {
 	albumlink = "../../album.html";
 	baseLink = "../photoalbum5.html";
 	albumTitle = "Блок #1";
-	prevAlbumLink = "photo5.html";
+	prevAlbumLink = "photo6.html";
 	nextAlbumLink = "photo2.html";
 } else if (currentPage.includes("photo5/photo2.html")) {
 	albumlink = "../../album.html";
@@ -200,6 +200,12 @@ if (currentPage.includes("album.html")) {
 	baseLink = "../photoalbum5.html";
 	albumTitle = "Блок #5";
 	prevAlbumLink = "photo4.html";
+	nextAlbumLink = "photo6.html";
+} else if (currentPage.includes("photo5/photo6.html")) {
+	albumlink = "../../album.html";
+	baseLink = "../photoalbum5.html";
+	albumTitle = "Блок #6";
+	prevAlbumLink = "photo5.html";
 	nextAlbumLink = "photo1.html";
 	//video =================================
 } else if (currentPage.includes("videoalbum1.html")) {

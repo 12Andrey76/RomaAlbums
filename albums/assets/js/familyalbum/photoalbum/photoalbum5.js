@@ -75,6 +75,21 @@ const carouselItems = [
 			{ imgSrc: 'https://radika1.link/2026/01/14/51c54e7d8256f6aff2.th.jpg', link: 'photo5/photo5.html#slide51', alt: 'preview 51' },
 			{ imgSrc: 'https://radika1.link/2026/01/14/52df8ec56773079467.th.jpg', link: 'photo5/photo5.html#slide52', alt: 'preview 52' },
 			{ imgSrc: 'https://s1.radikal.cloud/2026/03/01/539346f08c76ef7898.th.jpg', link: 'photo5/photo5.html#slide53', alt: 'preview 53' },
+			{ imgSrc: 'https://s2.radikal.cloud/2026/03/04/5490a6b61db6a79b63.th.jpg', link: 'photo5/photo5.html#slide54', alt: 'preview 54' },
+			{ imgSrc: 'https://radika1.link/2026/03/04/557cf53d41ac9e6204.th.jpg', link: 'photo5/photo5.html#slide55', alt: 'preview 55' },
+			{ imgSrc: 'https://s2.radikal.cloud/2026/03/04/561550cd4e12e8ebb4.th.jpg', link: 'photo5/photo5.html#slide56', alt: 'preview 56' },
+			{ imgSrc: 'https://s2.radikal.cloud/2026/03/04/5726abf8a2463272e7.th.jpg', link: 'photo5/photo5.html#slide57', alt: 'preview 57' },
+			{ imgSrc: 'https://radika1.link/2026/03/04/58975ebad69082d8e2.th.jpg', link: 'photo5/photo5.html#slide58', alt: 'preview 58' },
+			{ imgSrc: 'https://s2.radikal.cloud/2026/03/04/595b47e0c87644bd45.th.jpg', link: 'photo5/photo5.html#slide59', alt: 'preview 59' },
+			{ imgSrc: 'https://s1.radikal.cloud/2026/03/04/60956ce610ee43564a.th.jpg', link: 'photo5/photo5.html#slide60', alt: 'preview 60' },
+    ]
+  },
+	{
+    title: "Блок #6",
+    slides: [
+      { imgSrc: 'https://radika1.link/2026/03/04/6123ead96d5ae12cff.th.jpg', link: 'photo5/photo6.html#slide61', alt: 'preview 61' },
+			{ imgSrc: 'https://s2.radikal.cloud/2026/03/04/62092ce7b95d5acbeb.th.jpg', link: 'photo5/photo6.html#slide62', alt: 'preview 62' },
+			
     ]
   },
   
