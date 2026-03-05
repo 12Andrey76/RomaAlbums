@@ -9,4 +9,5 @@
     { id: 'slide7', title: "Видео 7", iframeSrc: "https://rutube.ru/play/embed/3e07ffb51f71e58cc335b20638bade4b/?p=wGqFHJhqYSlT-KmiYzsiEQ" },
     { id: 'slide8', title: "Видео 8", iframeSrc: "https://rutube.ru/play/embed/d89956c9f49b6fdba529263928434c0b/?p=ajl-aF1WzuUDao22TJNhaA" },
     { id: 'slide9', title: "Видео 9", iframeSrc: "https://rutube.ru/play/embed/5d38ea9e3cbbbd37ae91dc59502e3722/?p=kZto9q2FXiQbxVKLjqiI5Q" },
+    { id: 'slide10', title: "Видео 10", iframeSrc: "https://rutube.ru/play/embed/43c26f1acd97c64f504eb9a32094de35/?p=20rfeqN2MN2ZgrxcgyWHmw" },
   ];
