@@ -12,6 +12,7 @@ const carouselItems = [
 			{ imgSrc: 'https://s1.radikal.cloud/2026/01/07/81233f808419c8d21.th.jpg', link: 'video5/video1.html#slide8', alt: 'preview 8' },
 			{ imgSrc: 'https://radika1.link/2026/02/08/96b69ba5eab94cefe.th.jpg', link: 'video5/video1.html#slide9', alt: 'preview 9' },
 			{ imgSrc: 'https://radika1.link/2026/03/05/10671e933b0f780fea.th.jpg', link: 'video5/video1.html#slide10', alt: 'preview 10' },
+			{ imgSrc: 'https://radika1.link/2026/03/09/11c77dc9aea474601f.th.jpg', link: 'video5/video1.html#slide11', alt: 'preview 11' },
     ]
   },
 ];
