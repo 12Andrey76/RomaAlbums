@@ -89,6 +89,7 @@ const carouselItems = [
     slides: [
       { imgSrc: 'https://radika1.link/2026/03/04/6123ead96d5ae12cff.th.jpg', link: 'photo5/photo6.html#slide61', alt: 'preview 61' },
 			{ imgSrc: 'https://s2.radikal.cloud/2026/03/04/62092ce7b95d5acbeb.th.jpg', link: 'photo5/photo6.html#slide62', alt: 'preview 62' },
+			{ imgSrc: 'https://radika1.link/2026/04/04/635d48a08250ab1ad3.th.jpg', link: 'photo5/photo6.html#slide63', alt: 'preview 63' },
 			
     ]
   },
