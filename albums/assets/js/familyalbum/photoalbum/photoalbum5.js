@@ -93,5 +93,4 @@ const carouselItems = [
 			
     ]
   },
-  
 ];

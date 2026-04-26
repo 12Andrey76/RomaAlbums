@@ -14,7 +14,7 @@ if (currentPage.includes("album.html")) {
 	albumlink = "../album.html";
 	baseLink = "../../../index.html";
 	albumTitle = "Фото 1 год";
-	prevAlbumLink = "photoalbum5.html";
+	prevAlbumLink = "photoalbum6.html";
 	nextAlbumLink = "photoalbum2.html";
 } else if (currentPage.includes("photoalbum2.html")) {
 	albumlink = "../album.html";
@@ -39,6 +39,12 @@ if (currentPage.includes("album.html")) {
 	baseLink = "../../../index.html";
 	albumTitle = "Фото 5 лет";
 	prevAlbumLink = "photoalbum4.html";
+	nextAlbumLink = "photoalbum6.html";
+} else if (currentPage.includes("photoalbum6.html")) {
+	albumlink = "../album.html";
+	baseLink = "../../../index.html";
+	albumTitle = "Фото 6 лет";
+	prevAlbumLink = "photoalbum5.html";
 	nextAlbumLink = "photoalbum1.html";
 // Год1==============
 } else if (currentPage.includes("photo1/photo1.html")) {
@@ -207,12 +213,18 @@ if (currentPage.includes("album.html")) {
 	albumTitle = "Блок #6";
 	prevAlbumLink = "photo5.html";
 	nextAlbumLink = "photo1.html";
+} else if (currentPage.includes("photo6/photo1.html")) {
+	albumlink = "../../album.html";
+	baseLink = "../photoalbum6.html";
+	albumTitle = "Блок #1";
+	prevAlbumLink = "#";
+	nextAlbumLink = "#";
 	//video =================================
 } else if (currentPage.includes("videoalbum1.html")) {
 	albumlink = "../album.html";
 	baseLink = "../../../index.html";
 	albumTitle = "Видео 1 год";
-	prevAlbumLink = "videoalbum5.html";
+	prevAlbumLink = "videoalbum6.html";
 	nextAlbumLink = "videoalbum2.html";
 } else if (currentPage.includes("videoalbum2.html")) {
 	albumlink = "../album.html";
@@ -237,6 +249,12 @@ if (currentPage.includes("album.html")) {
 	baseLink = "../../../index.html";
 	albumTitle = "Видео 5 лет";
 	prevAlbumLink = "videoalbum4.html";
+	nextAlbumLink = "videoalbum6.html";
+} else if (currentPage.includes("videoalbum6.html")) {
+	albumlink = "../album.html";
+	baseLink = "../../../index.html";
+	albumTitle = "Видео 6 лет";
+	prevAlbumLink = "videoalbum5.html";
 	nextAlbumLink = "videoalbum1.html";
 	
 } else if (currentPage.includes("video1/video1.html")) {
@@ -290,6 +308,12 @@ if (currentPage.includes("album.html")) {
 } else if (currentPage.includes("video5/video1.html")) {
 	albumlink = "../../album.html";
 	baseLink = "../videoalbum5.html";
+	albumTitle = "Блок #1";
+	prevAlbumLink = "#";
+	nextAlbumLink = "#";
+} else if (currentPage.includes("video6/video1.html")) {
+	albumlink = "../../album.html";
+	baseLink = "../videoalbum6.html";
 	albumTitle = "Блок #1";
 	prevAlbumLink = "#";
 	nextAlbumLink = "#";
@@ -449,6 +473,14 @@ if (currentPage.includes("album.html")) {
 } else if (currentPage.includes("videoalbum5.html")) {
 	activeIds.push("active-video-album");
 } else if (currentPage.includes("video5.html")) {
+	activeIds.push("active-video");
+} else if (currentPage.includes("photoalbum6.html")) {
+	activeIds.push("active-photo-album");
+} else if (currentPage.includes("photo6.html")) {
+	activeIds.push("active-photo");
+} else if (currentPage.includes("videoalbum6.html")) {
+	activeIds.push("active-video-album");
+} else if (currentPage.includes("video6.html")) {
 	activeIds.push("active-video");
 }  
 
