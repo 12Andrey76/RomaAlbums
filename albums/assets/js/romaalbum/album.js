@@ -4,14 +4,14 @@ const carouselData = [
     items: [
   { link: "photoalbum/photoalbum.html#1", img: "https://s3.radikal.cloud/2025/11/30/19eb5b3ffe266e964.th.jpg" },
   { link: "photoalbum/photoalbum.html#2", img: "https://s3.radikal.cloud/2025/11/30/2f68fb817e5ed7cb9.th.jpg" },
-  { link: "photoalbum/photoalbum.html#3", img: "https://s2.radikal.cloud/2025/11/30/3930895ee3ac10863.th.jpg" },
+  { link: "photoalbum/photoalbum.html#3", img: "https://s1.radikal.cloud/2026/05/24/1000043165d5b8c2301426f683.th.jpg" },
   { link: "photoalbum/photoalbum.html#4", img: "https://s1.radikal.cloud/2025/11/30/48e6dfa958f423ed9.th.jpg" },
   {link: "photoalbum/photoalbum.html#5", img: "https://radika1.link/2025/11/30/57334af798cfd24ca.th.jpg" },
   { link: "photoalbum/photoalbum.html#6", img: "https://s1.radikal.cloud/2025/11/30/6c98d33a194c8624b.th.jpg" },
   { link: "photoalbum/photoalbum.html#7", img: "https://radika1.link/2025/11/30/7c9f480ba07ec5ead.th.jpg" },
   { link: "photoalbum/photoalbum.html#8", img: "https://s1.radikal.cloud/2025/11/30/88466056522aa93dc.th.jpg" },
   { link: "photoalbum/photoalbum.html#9", img: "https://radika1.link/2025/11/30/9be28056cfd1d346b.th.jpg" },
-  { link: "photoalbum/photoalbum.html#10", img: "https://s2.radikal.cloud/2025/11/30/1077aa33f2a5ebe764.th.jpg" },
+  { link: "photoalbum/photoalbum.html#10", img: "https://s1.radikal.cloud/2026/05/24/1000043166b9f7c331d2044e72.th.jpg" },
   { link: "photoalbum/photoalbum.html#11", img: "https://radika1.link/2025/11/30/11a596020c03f9798b.th.jpg" },
   { link: "photoalbum/photoalbum.html#12", img: "https://s1.radikal.cloud/2025/11/30/12c6e5b900d6df67e5.th.jpg" },
 ]
@@ -22,7 +22,7 @@ const carouselData = [
     class: "videomenu",
     items: [
   { link: "videoalbum/videoalbum.html#1", img: "https://radika1.link/2025/11/30/3ca5776af797f0d77.th.jpg" },
-  { link: "videoalbum/videoalbum.html#2", img: "https://s2.radikal.cloud/2025/11/30/4c2bcfa5349ada6cd.th.jpg" },
+  { link: "videoalbum/videoalbum.html#2", img: "https://radika1.link/2026/05/24/1000043167b23a903fe5d994b9.th.jpg" },
   { link: "videoalbum/videoalbum.html#3", img: "https://radika1.link/2025/11/30/686eef653fe56edc2.th.jpg" },
   { link: "videoalbum/videoalbum.html#4", img: "https://radika1.link/2025/11/30/75aefdccfdd18f35e.th.jpg" },
   { link: "videoalbum/videoalbum.html#5", img: "https://s1.radikal.cloud/2025/11/30/8291e6b25a92d2876.th.jpg" },
