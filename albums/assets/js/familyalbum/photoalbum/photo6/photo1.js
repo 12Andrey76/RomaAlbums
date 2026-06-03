@@ -10,4 +10,5 @@ const carouselSlides = [
   { id: 'slide9', title: 'Фото 9', imgSrc: 'https://radika1.link/2026/05/10/9a785f3d9b88ebae2.jpg', alt: 'Slide 9' },
   { id: 'slide10', title: 'Фото 10', imgSrc: 'https://radika1.link/2026/05/10/10cba8ca3a90a1b0ae.jpg', alt: 'Slide 10' },
   { id: 'slide11', title: 'Фото 11', imgSrc: 'https://radika1.link/2026/05/10/11b34e2eb9abced0f9.jpg', alt: 'Slide 11' },
+  { id: 'slide12', title: 'Фото 12', imgSrc: 'https://s1.radikal.cloud/2026/06/03/1239ec2b53b122c677.jpg', alt: 'Slide 12' }
 ];

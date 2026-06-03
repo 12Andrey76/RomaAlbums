@@ -213,12 +213,19 @@ if (currentPage.includes("album.html")) {
 	albumTitle = "Блок #6";
 	prevAlbumLink = "photo5.html";
 	nextAlbumLink = "photo1.html";
+// Год6==============
 } else if (currentPage.includes("photo6/photo1.html")) {
 	albumlink = "../../album.html";
 	baseLink = "../photoalbum6.html";
 	albumTitle = "Блок #1";
-	prevAlbumLink = "#";
-	nextAlbumLink = "#";
+	prevAlbumLink = "photo2.html";
+	nextAlbumLink = "photo2.html";
+} else if (currentPage.includes("photo6/photo2.html")) {
+	albumlink = "../../album.html";
+	baseLink = "../photoalbum6.html";
+	albumTitle = "Блок #2";
+	prevAlbumLink = "photo1.html";
+	nextAlbumLink = "photo1.html";
 	//video =================================
 } else if (currentPage.includes("videoalbum1.html")) {
 	albumlink = "../album.html";

@@ -13,6 +13,13 @@ const carouselItems = [
       { imgSrc: 'https://radika1.link/2026/05/10/9a785f3d9b88ebae2.th.jpg', link: 'photo6/photo1.html#slide9', alt: 'preview 9' },
 			{ imgSrc: 'https://radika1.link/2026/05/10/10cba8ca3a90a1b0ae.th.jpg', link: 'photo6/photo1.html#slide10', alt: 'preview 10' },
       { imgSrc: 'https://radika1.link/2026/05/10/11b34e2eb9abced0f9.th.jpg', link: 'photo6/photo1.html#slide11', alt: 'preview 11' },
+      { imgSrc: 'https://s1.radikal.cloud/2026/06/03/1239ec2b53b122c677.th.jpg', link: 'photo6/photo1.html#slide12', alt: 'preview 12' }
+    ]
+  },
+  {
+    title: "Блок #1",
+    slides: [
+      { imgSrc: 'https://radika1.link/2026/06/03/1ff0c0082822d4931.th.jpg', link: 'photo6/photo2.html#slide13', alt: 'preview 1' },
     ]
   },
 ];
