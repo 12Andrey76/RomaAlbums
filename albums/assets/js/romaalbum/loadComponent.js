@@ -1,3 +1,5 @@
+// loadComponent.js – для альбома "Рома" (с поддержкой reader.html)
+
 // Получаем текущий путь страницы
 const currentPage = window.location.pathname;
 
@@ -13,152 +15,27 @@ if (currentPage.includes("album.html") && !currentPage.includes("photoalbum") &&
 	albumlink = "album.html";
 	baseLink = "../../index.html";
 
-// ========== Фотоальбом (обзор) ==========
-} else if (currentPage.includes("photoalbum/photoalbum.html")) {
-	albumlink = "../album.html";
+// ========== Страница reader (универсальный просмотр) ==========
+} else if (currentPage.includes("reader.html")) {
+	// Определяем тип из URL (photo или video)
+	const params = new URLSearchParams(window.location.search);
+	const type = params.get('type');
+	if (type === 'photo') {
+		albumlink = "../album.html#photomenu";
+		albumTitle = "Фотоальбом";
+	} else if (type === 'video') {
+		albumlink = "../album.html#videomenu";
+		albumTitle = "Видеоальбом";
+	} else {
+		albumlink = "../album.html";
+		albumTitle = "Альбом";
+	}
 	baseLink = "../../../index.html";
-	albumTitle = "Фотоальбом";
-	prevAlbumLink = "photo/photo12.html";
-	nextAlbumLink = "photo/photo1.html";
+	// Для reader.html стрелки навигации не используются, можно задать заглушки
 
-// ========== Фото (отдельные страницы 1–12 месяцев) ==========
-} else if (currentPage.includes("photo/photo1.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "1 месяц";
-	prevAlbumLink = "photo12.html";
-	nextAlbumLink = "photo2.html";
-} else if (currentPage.includes("photo/photo2.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "2 месяца";
-	prevAlbumLink = "photo1.html";
-	nextAlbumLink = "photo3.html";
-} else if (currentPage.includes("photo/photo3.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "3 месяца";
-	prevAlbumLink = "photo2.html";
-	nextAlbumLink = "photo4.html";
-} else if (currentPage.includes("photo/photo4.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "4 месяца";
-	prevAlbumLink = "photo3.html";
-	nextAlbumLink = "photo5.html";
-} else if (currentPage.includes("photo/photo5.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "5 месяцев";
-	prevAlbumLink = "photo4.html";
-	nextAlbumLink = "photo6.html";
-} else if (currentPage.includes("photo/photo6.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "6 месяцев";
-	prevAlbumLink = "photo5.html";
-	nextAlbumLink = "photo7.html";
-} else if (currentPage.includes("photo/photo7.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "7 месяцев";
-	prevAlbumLink = "photo6.html";
-	nextAlbumLink = "photo8.html";
-} else if (currentPage.includes("photo/photo8.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "8 месяцев";
-	prevAlbumLink = "photo7.html";
-	nextAlbumLink = "photo9.html";
-} else if (currentPage.includes("photo/photo9.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "9 месяцев";
-	prevAlbumLink = "photo8.html";
-	nextAlbumLink = "photo10.html";
-} else if (currentPage.includes("photo/photo10.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "10 месяцев";
-	prevAlbumLink = "photo9.html";
-	nextAlbumLink = "photo11.html";
-} else if (currentPage.includes("photo/photo11.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "11 месяцев";
-	prevAlbumLink = "photo10.html";
-	nextAlbumLink = "photo12.html";
-} else if (currentPage.includes("photo/photo12.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../photoalbum.html";
-	albumTitle = "1 годик";
-	prevAlbumLink = "photo11.html";
-	nextAlbumLink = "photo1.html";
-
-// ========== Видеоальбом (обзор) ==========
-} else if (currentPage.includes("videoalbum/videoalbum.html")) {
-	albumlink = "../album.html";
-	baseLink = "../../../index.html";
-	albumTitle = "Видеоальбом";
-	prevAlbumLink = "video/video9.html";
-	nextAlbumLink = "video/video1.html";
-
-// ========== Видео (отдельные страницы 1–9) ==========
-} else if (currentPage.includes("video/video1.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "3 месяца";
-	prevAlbumLink = "video9.html";
-	nextAlbumLink = "video2.html";
-} else if (currentPage.includes("video/video2.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "4 месяца";
-	prevAlbumLink = "video1.html";
-	nextAlbumLink = "video3.html";
-} else if (currentPage.includes("video/video3.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "6 месяцев";
-	prevAlbumLink = "video2.html";
-	nextAlbumLink = "video4.html";
-} else if (currentPage.includes("video/video4.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "7 месяцев";
-	prevAlbumLink = "video3.html";
-	nextAlbumLink = "video5.html";
-} else if (currentPage.includes("video/video5.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "8 месяцев";
-	prevAlbumLink = "video4.html";
-	nextAlbumLink = "video6.html";
-} else if (currentPage.includes("video/video6.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "9 месяцев";
-	prevAlbumLink = "video5.html";
-	nextAlbumLink = "video7.html";
-} else if (currentPage.includes("video/video7.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "10 месяцев";
-	prevAlbumLink = "video6.html";
-	nextAlbumLink = "video8.html";
-} else if (currentPage.includes("video/video8.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "11 месяцев";
-	prevAlbumLink = "video7.html";
-	nextAlbumLink = "video9.html";
-} else if (currentPage.includes("video/video9.html")) {
-	albumlink = "../../album.html";
-	baseLink = "../videoalbum.html";
-	albumTitle = "1 годик";
-	prevAlbumLink = "video8.html";
-	nextAlbumLink = "video1.html";
 }
+
+// ========== ШАБЛОНЫ ==========
 
 const headerHTML = `
 <div class="container-fluid header text-center">
@@ -180,7 +57,10 @@ const headerHTML = `
 `;
 
 const menuHTML = `
-<div class="row">              
+<div class="row">
+	<div class="col-12 text-center d-md-none d-sm-block">
+    <div class="menu_album"><a id="back-to-blocks-link" href="#">в месяцы</a></div>
+  </div>
   <div class="col-4 text-center d-md-none d-sm-block">
     <div class="menu_album"><a href="${albumlink}">главная</a></div>
   </div>
@@ -196,14 +76,8 @@ const menuHTML = `
 const navHTML = `
 <div class="container">
   <div class="row">
-    <div class="col-3">
-      <div class="slide_album"><a href="${prevAlbumLink}">&lt;</a></div>
-    </div>
-    <div class="col-6">
+    <div class="col-12">
       <div class="slide_album"><h4>${albumTitle}</h4></div>
-    </div>
-    <div class="col-3">
-      <div class="slide_album"><a href="${nextAlbumLink}">&gt;</a></div>
     </div>
   </div>
 </div>
@@ -228,7 +102,7 @@ const leftHTML = `
 </div>
 <div class="card text-bg-white mb-3">
   <div class="card-body">
-    <p class="card-text"><a href="${albumlink}" id="active-album-menu">Меню</a></p>
+    <p class="card-text" id="active-album-menu"><a href="${albumlink}">Меню</a></p>
   </div>
 </div>
 <div class="card text-bg-white mb-3">
@@ -251,7 +125,7 @@ const rightHTML = `
 </div>
 <div class="card text-bg-white mb-3">
   <div class="card-body">
-    <p class="card-text"><a href="${albumlink}" id="active-album-menu">Меню</a></p>
+    <p class="card-text" id="back-to-blocks-link"><a href="#">В Месяцы</a></p>
   </div>
 </div>
 <div class="card text-bg-white mb-3">
@@ -272,6 +146,7 @@ const footerHTML = `
 </footer>
 `;
 
+// Вставка компонентов
 document.getElementById('header').innerHTML = headerHTML;
 document.getElementById('menu').innerHTML = menuHTML;
 
@@ -285,27 +160,41 @@ document.getElementById('left').innerHTML = leftHTML;
 document.getElementById('right').innerHTML = rightHTML;
 document.getElementById('footer').innerHTML = footerHTML;
 
-// Определяем активные элементы меню
-let activeIds = [];
+// ========== ПОДСВЕТКА АКТИВНЫХ ПУНКТОВ ==========
 
-if (currentPage.includes("album.html") && !currentPage.includes("photoalbum") && !currentPage.includes("videoalbum")) {
-	document.getElementById('active-album-menu').classList.add('active');
-	document.querySelector('#right #active-album-menu')?.classList.add('active');
-} else if (currentPage.includes("photoalbum/photoalbum.html") || currentPage.includes("photo/photo")) {
-	activeIds.push("active-photo-album");
-} else if (currentPage.includes("videoalbum/videoalbum.html") || currentPage.includes("video/video")) {
-	activeIds.push("active-video-album");
+// Для страницы reader.html активные пункты определяются по типу
+if (currentPage.includes("reader.html")) {
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get('type');
+  if (type === 'photo') {
+    document.getElementById('active-photo-album')?.classList.add('active');
+  } else if (type === 'video') {
+    document.getElementById('active-video-album')?.classList.add('active');
+  } else {
+    document.getElementById('active-album-menu')?.classList.add('active');
+  }
+} else {
+  // Для остальных страниц используем старую логику
+  let activeIds = [];
+
+  if (currentPage.includes("album.html") && !currentPage.includes("photoalbum") && !currentPage.includes("videoalbum")) {
+    activeIds.push("active-album-menu");
+  } else if (currentPage.includes("photoalbum/photoalbum.html") || currentPage.includes("photo/photo")) {
+    activeIds.push("active-photo-album");
+  } else if (currentPage.includes("videoalbum/videoalbum.html") || currentPage.includes("video/video")) {
+    activeIds.push("active-video-album");
+  }
+
+  if (currentPage.includes("photo/photo")) {
+    activeIds.push("active-photo");
+  } else if (currentPage.includes("video/video")) {
+    activeIds.push("active-video");
+  }
+
+  activeIds.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.add("active");
+    }
+  });
 }
-
-if (currentPage.includes("photo/photo")) {
-	activeIds.push("active-photo");
-} else if (currentPage.includes("video/video")) {
-	activeIds.push("active-video");
-}
-
-activeIds.forEach(id => {
-	const element = document.getElementById(id);
-	if (element) {
-		element.classList.add("active");
-	}
-});

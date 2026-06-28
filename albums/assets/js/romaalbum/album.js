@@ -1,74 +1,106 @@
+// albums/romaalbum/album.js
+
 const carouselData = [
   {
+    id: 'photomenu',
     title: "Фотоменю",
     items: [
-  { link: "photoalbum/photoalbum.html#1", img: "https://s3.radikal.cloud/2025/11/30/19eb5b3ffe266e964.th.jpg" },
-  { link: "photoalbum/photoalbum.html#2", img: "https://s3.radikal.cloud/2025/11/30/2f68fb817e5ed7cb9.th.jpg" },
-  { link: "photoalbum/photoalbum.html#3", img: "https://s1.radikal.cloud/2026/05/24/1000043165d5b8c2301426f683.th.jpg" },
-  { link: "photoalbum/photoalbum.html#4", img: "https://s1.radikal.cloud/2025/11/30/48e6dfa958f423ed9.th.jpg" },
-  {link: "photoalbum/photoalbum.html#5", img: "https://radika1.link/2025/11/30/57334af798cfd24ca.th.jpg" },
-  { link: "photoalbum/photoalbum.html#6", img: "https://s1.radikal.cloud/2025/11/30/6c98d33a194c8624b.th.jpg" },
-  { link: "photoalbum/photoalbum.html#7", img: "https://radika1.link/2025/11/30/7c9f480ba07ec5ead.th.jpg" },
-  { link: "photoalbum/photoalbum.html#8", img: "https://s1.radikal.cloud/2025/11/30/88466056522aa93dc.th.jpg" },
-  { link: "photoalbum/photoalbum.html#9", img: "https://radika1.link/2025/11/30/9be28056cfd1d346b.th.jpg" },
-  { link: "photoalbum/photoalbum.html#10", img: "https://s1.radikal.cloud/2026/05/24/1000043166b9f7c331d2044e72.th.jpg" },
-  { link: "photoalbum/photoalbum.html#11", img: "https://radika1.link/2025/11/30/11a596020c03f9798b.th.jpg" },
-  { link: "photoalbum/photoalbum.html#12", img: "https://s1.radikal.cloud/2025/11/30/12c6e5b900d6df67e5.th.jpg" },
-]
-
+      { link: "photoalbum/reader.html?type=photo#block-1", src: "https://s3.radikal.cloud/2025/11/30/19eb5b3ffe266e964.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-2", src: "https://s3.radikal.cloud/2025/11/30/2f68fb817e5ed7cb9.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-3", src: "https://s1.radikal.cloud/2026/05/24/1000043165d5b8c2301426f683.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-4", src: "https://s1.radikal.cloud/2025/11/30/48e6dfa958f423ed9.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-5", src: "https://radika1.link/2025/11/30/57334af798cfd24ca.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-6", src: "https://s1.radikal.cloud/2025/11/30/6c98d33a194c8624b.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-7", src: "https://radika1.link/2025/11/30/7c9f480ba07ec5ead.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-8", src: "https://s1.radikal.cloud/2025/11/30/88466056522aa93dc.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-9", src: "https://radika1.link/2025/11/30/9be28056cfd1d346b.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-10", src: "https://s1.radikal.cloud/2026/05/24/1000043166b9f7c331d2044e72.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-11", src: "https://radika1.link/2025/11/30/11a596020c03f9798b.th.jpg" },
+      { link: "photoalbum/reader.html?type=photo#block-12", src: "https://s1.radikal.cloud/2025/11/30/12c6e5b900d6df67e5.th.jpg" }
+    ]
   },
   {
+    id: 'videomenu',
     title: "Видеоменю",
-    class: "videomenu",
     items: [
-  { link: "videoalbum/videoalbum.html#1", img: "https://radika1.link/2025/11/30/3ca5776af797f0d77.th.jpg" },
-  { link: "videoalbum/videoalbum.html#2", img: "https://radika1.link/2026/05/24/1000043167b23a903fe5d994b9.th.jpg" },
-  { link: "videoalbum/videoalbum.html#3", img: "https://radika1.link/2025/11/30/686eef653fe56edc2.th.jpg" },
-  { link: "videoalbum/videoalbum.html#4", img: "https://radika1.link/2025/11/30/75aefdccfdd18f35e.th.jpg" },
-  { link: "videoalbum/videoalbum.html#5", img: "https://s1.radikal.cloud/2025/11/30/8291e6b25a92d2876.th.jpg" },
-  { link: "videoalbum/videoalbum.html#6", img: "https://radika1.link/2025/11/30/9d0d4397f75bb53e4.th.jpg" },
-  { link: "videoalbum/videoalbum.html#7", img: "https://radika1.link/2025/11/30/1061660d8adec0b1e2.th.jpg" },
-  { link: "videoalbum/videoalbum.html#8", img: "https://s1.radikal.cloud/2025/11/30/112ec390ef40c01b3b.th.jpg" },
-  { link: "videoalbum/videoalbum.html#9", img: "https://s3.radikal.cloud/2025/11/30/123c92af4c79574351.th.jpg" }
-]
-
+      { link: "videoalbum/reader.html?type=video#block-1", src: "https://radika1.link/2025/11/30/3ca5776af797f0d77.th.jpg" },
+      { link: "videoalbum/reader.html?type=video#block-2", src: "https://radika1.link/2026/05/24/1000043167b23a903fe5d994b9.th.jpg" },
+      { link: "videoalbum/reader.html?type=video#block-3", src: "https://radika1.link/2025/11/30/686eef653fe56edc2.th.jpg" },
+      { link: "videoalbum/reader.html?type=video#block-4", src: "https://radika1.link/2025/11/30/75aefdccfdd18f35e.th.jpg" },
+      { link: "videoalbum/reader.html?type=video#block-5", src: "https://s1.radikal.cloud/2025/11/30/8291e6b25a92d2876.th.jpg" },
+      { link: "videoalbum/reader.html?type=video#block-6", src: "https://radika1.link/2025/11/30/9d0d4397f75bb53e4.th.jpg" },
+      { link: "videoalbum/reader.html?type=video#block-7", src: "https://radika1.link/2025/11/30/1061660d8adec0b1e2.th.jpg" },
+      { link: "videoalbum/reader.html?type=video#block-8", src: "https://s1.radikal.cloud/2025/11/30/112ec390ef40c01b3b.th.jpg" },
+      { link: "videoalbum/reader.html?type=video#block-9", src: "https://s3.radikal.cloud/2025/11/30/123c92af4c79574351.th.jpg" }
+    ]
   }
 ];
 
-function initManualCarousel(data) {
-  const container = document.querySelector('#carouselExampleIndicators .carousel-inner');
-  
-  container.innerHTML = data.map((slide, idx) => `
-    <div class="carousel-item ${idx === 0 ? 'active' : ''}" id="month-${slide.id}">
-      <div class="watch_album text-center"><h2>${slide.title}</h2></div>
-      <div class="row"> 
-        ${slide.items.map(item => `
-          <div class="col-md-4 col-4">
-            <a href="${item.link}">
-               <!-- Добавлен класс slide.class для Видеоменю, если он есть -->
-               <img src="${item.img}" class="${slide.class || ''} img-thumbnail" alt="IMG">
-            </a>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `).join('');
+function renderCarousel(slidesData) {
+  const carousel = document.getElementById('carouselExampleIndicators');
+  const carouselInner = carousel.querySelector('.carousel-inner');
+  if (!carouselInner) return;
 
-  // Инициализируем объект карусели
-  const carouselElem = document.querySelector('#carouselExampleIndicators');
-  const carouselInstance = new bootstrap.Carousel(carouselElem, { interval: false });
+  carouselInner.innerHTML = '';
 
-  // ЛОГИКА ПЕРЕХОДА ПО ID (Hash)
-  // Проверяем URL при загрузке (напр. photoalbum.html#2)
-  const hash = window.location.hash.replace('#', '');
-  if (hash) {
-    // Ищем индекс массива, где id совпадает с числом из хеша
-    const targetIndex = data.findIndex(slide => slide.id == hash);
+  slidesData.forEach((slide, index) => {
+    const carouselItem = document.createElement('div');
+    carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'watch_album text-center';
+    const titleH2 = document.createElement('h2');
+    titleH2.textContent = slide.title;
+    titleDiv.appendChild(titleH2);
+
+    const rowDiv = document.createElement('div');
+    rowDiv.className = 'row';
+
+    slide.items.forEach(item => {
+      const colDiv = document.createElement('div');
+      colDiv.className = 'col-md-4 col-4';
+
+      const link = document.createElement('a');
+      link.href = item.link;
+      link.className = 'd-block';
+
+      const img = document.createElement('img');
+      img.src = item.src;
+      img.alt = item.alt || 'Изображение';
+
+      // ТОЛЬКО ДЛЯ ВИДЕОМЕНЮ – круглые картинки
+      if (slide.id === 'videomenu') {
+        img.className = 'img-thumbnail rounded-circle';
+      } else {
+        img.className = 'img-thumbnail';
+      }
+
+      link.appendChild(img);
+      colDiv.appendChild(link);
+      rowDiv.appendChild(colDiv);
+    });
+
+    carouselItem.appendChild(titleDiv);
+    carouselItem.appendChild(rowDiv);
+    carouselInner.appendChild(carouselItem);
+  });
+
+  const bsCarousel = new bootstrap.Carousel(carousel, { interval: false, wrap: true });
+  window.albumCarousel = bsCarousel;
+
+  function goToSlideByHash() {
+    const hash = window.location.hash.substring(1);
+    if (!hash) return;
+    const targetIndex = slidesData.findIndex(slide => slide.id === hash);
     if (targetIndex !== -1) {
-      carouselInstance.to(targetIndex);
+      bsCarousel.to(targetIndex);
     }
   }
+
+  goToSlideByHash();
+  window.addEventListener('hashchange', goToSlideByHash);
 }
 
-// Запуск
-document.addEventListener('DOMContentLoaded', () => initManualCarousel(carouselData));
+document.addEventListener('DOMContentLoaded', () => {
+  renderCarousel(carouselData);
+});
