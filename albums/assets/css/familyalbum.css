@@ -38,13 +38,12 @@ a {
 	margin-bottom: 5%;
 }
 
-.album, .cover  {
+.album  {
   height: 67px;
   background-color: gold;
   border: solid 5px white;
   border-radius: 10px;
   color: green;
-  margin-bottom: 25px;
 }
 
 .cover a {
@@ -59,7 +58,7 @@ a {
 	font-size: 25px;
 }
 
-.album p {
+.album h4 {
   font-size: 20px;
 	font-weight: bold;
 	padding-top: 15px;
@@ -120,8 +119,11 @@ a {
 	border-radius: 100%;
 }
 
-iframe {
-	border-radius: 10px;
+#slides-carousel .ratio {
+	margin-top: 22px;
+}
+.video-iframe {
+  border-radius: 10px;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -206,9 +208,119 @@ footer h1 {
 	font-size: 22px;
 }
 
-@media (max-device-width : 768px) {
+/* ====== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ АЛЬБОМОВ ====== */
 
-	.cover {
+/* Карусель блоков – заголовок блока над сеткой */
+
+.mb-2 {
+  margin-bottom: 0 !important;
+}
+
+#blocks-carousel .carousel-item {
+  padding: 10px 0;
+}
+
+#blocks-carousel .carousel-item .text-center {
+	background-color: #6d76f3;
+	border-radius: 10px;
+	margin-left: 27%;
+	margin-top: 16px;
+	padding: 15px 0 5px 0;
+	height: 67px;
+	width: 47%;
+}
+
+#blocks-carousel .col-4 img {
+	border-radius: 50% !important;
+	border: 5px solid #ddd;
+	transition: transform 0.2s;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: 1 / 1;
+}
+
+#blocks-carousel .col-4 img:hover {
+    transform: scale(1.05);
+    border-color: white;
+}
+
+#slides-carousel .carousel-item {
+    flex-direction: column;
+    align-items: center;
+}
+
+#slides-carousel .carousel-item {
+	text-align: center;
+	padding: 10px 0;
+}
+
+#slides-carousel .carousel-item img {
+	width: 100%;
+	margin: 24px auto;
+	border: 5px solid #ddd;
+	border-radius: 10px;
+}
+
+#slides-carousel .carousel-item .text-center {
+	color: white;
+	width: 46%;
+	height: 67px;
+	margin: 16px auto 10px auto;
+	padding-top: 19px;
+	border-radius: 10px;
+	background-color: #6d76f3;
+}
+
+/* Кнопки управления – центрированы по высоте всего слайда */
+#blocks-carousel .carousel-control-prev,
+#blocks-carousel .carousel-control-next,
+#slides-carousel .carousel-control-prev,
+#slides-carousel .carousel-control-next {
+	top: 26px;
+	height: 67px;
+	width: 22%;
+	border-radius: 10px;
+	background-color: #c1c7f1;
+}
+
+#blocks-carousel .watch_album,
+#slides-carousel .watch_album {
+    width: 100% !important;
+    margin-left: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    height: auto !important;
+    padding: 0 !important;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    #blocks-carousel .carousel-control-prev,
+	#blocks-carousel .carousel-control-next,
+	#slides-carousel .carousel-control-prev,
+	#slides-carousel .carousel-control-next {
+		width: 15%;
+	}
+
+	#blocks-carousel .carousel-item .text-center {
+		width: 66%;
+		margin-left: 17%;
+	}
+
+	#slides-carousel .carousel-item .text-center {
+		width: 66%;
+	}
+
+	.text-center h3, .text-center h4 {
+		font-size: 30px;
+	}
+
+	#slides-carousel .carousel-item {
+		min-height: 300px;
+	}
+
+		.cover {
 		padding-top: 3%;
 	}
 
@@ -217,9 +329,12 @@ footer h1 {
 		padding-top: 2%;
 	}
 
-	.album p {
-		font-size: 150%;
-		padding-top: 5%;
+	.album h4 {
+		padding-top: 12px;
+	}
+
+	#back-to-blocks-link {
+		font-size: 70%;
 	}
 
 	.watch_album a {
@@ -233,6 +348,6 @@ footer h1 {
 
 	.menu_album {
     font-size: 175%;
-}
+	}
 
 }

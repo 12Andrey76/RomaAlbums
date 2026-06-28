@@ -117,16 +117,17 @@ a {
 }
 
 .slide_album {
-	background-color: darkgoldenrod;
+	background-color: #15c833;
 	border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-	margin-bottom: 32px;
+	margin-bottom: 25px;
 	font-size: 37px;
 }
 
 .slide_album h4 {
   padding: 14px 0 14px 0;
   color: black;
+	font-size: 72%;
 }
 
 .slide_album a {
@@ -135,12 +136,10 @@ a {
 }
 
 .watch_album {
-  background-color: darkgoldenrod;
+  background-color: #15c833;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 25px;
-  font-size: 30px;
-
 }
 
 .watch_album p {
@@ -148,8 +147,9 @@ a {
 }
 
 .watch_album h2 {
-  padding: 14px 0 14px 0;
+  padding: 10px 0 14px 0;
   color: black;
+	font-size: 30px;
 }
 
 .watch_album a:hover {
@@ -173,16 +173,81 @@ iframe {
 	margin-bottom: -30px;
 }
 
-.carousel-control-prev, .carousel-control-next {
-  height: 65px;
+.carousel-control-prev {
+  left: 5px;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  background-color: black;
+.carousel-control-next {
+  right: 5px;
+}
+
+/* ===== ЕДИНЫЙ СТИЛЬ ДЛЯ КНОПОК ВО ВСЕХ КАРУСЕЛЯХ ===== */
+.carousel-control-prev,
+.carousel-control-next {
+	top: 30px !important;
+	transform: translateY(-50%) !important;
+	width: 40px !important;
+	height: 40px !important;
+	background-color: rgb(1 140 25)!important;
+	border-radius: 50% !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	opacity: 0.8 !important;
+	transition: opacity 0.2s !important;
+	z-index: 10 !important;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+	opacity: 1 !important;
+	background-color: rgb(1 140 25) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	width: 20px !important;
+	height: 20px !important;
+	background-size: 100% 100% !important;
+	filter: invert(0) !important;
+}
+
+/* Переопределение для каруселей reader (чтобы кнопки были на своих местах) */
+#blocks-carousel .carousel-control-prev,
+#blocks-carousel .carousel-control-next,
+#slides-carousel .carousel-control-prev,
+#slides-carousel .carousel-control-next {
+	transform: translateY(-50%) !important;
+	width: 40px !important;
+	height: 40px !important;
+	background-color: rgb(1 140 25) !important;
+	left: 5px;
+	right: auto;
+}
+
+#slides-carousel .carousel-control-prev,
+#slides-carousel .carousel-control-next {
+	top: 29px !important;
+}
+
+#blocks-carousel .carousel-control-next,
+#slides-carousel .carousel-control-next {
+	right: 5px;
+	left: auto;
+}
+
+#blocks-carousel .carousel-control-prev-icon,
+#blocks-carousel .carousel-control-next-icon,
+#slides-carousel .carousel-control-prev-icon,
+#slides-carousel .carousel-control-next-icon {
+	width: 20px !important;
+	height: 20px !important;
+	background-size: 100% 100% !important;
+	filter: invert(0) !important;
 }
 
 .carousel-inner img {
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 	width: 100%;
   height: auto;
 }
@@ -301,6 +366,88 @@ footer h1 {
 
 	.menu_album a {
 		color: black;
+		font-size: 150%;
 	}
 
+	.text-white {
+		font-size: 175%;
+	}
+
+	#blocks-carousel .carousel-item .text-center {
+    width: 100%;
+  }
+
+  #slides-carousel .carousel-item .text-center {
+    width: 100%;
+  }
+
+  #slides-carousel .carousel-control-prev,
+  #slides-carousel .carousel-control-next {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+}
+
+/* ====== СТИЛИ ДЛЯ READER (блоки и слайды) ====== */
+
+#blocks-carousel .carousel-item {
+  padding: 10px 0;
+}
+
+#blocks-carousel .carousel-item .text-center {
+  background-color: #15c833;
+	border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: -9px auto 15px;
+  padding: 10px 0;
+  width: 100%;
+  color: white;
+}
+
+#blocks-carousel .col-4 img {
+  border: 5px solid #dee2e6;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+#blocks-carousel .col-4 img:hover {
+  transform: scale(1.05);
+  border-color: gold;
+}
+
+#slides-carousel .carousel-item {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#slides-carousel .carousel-item img {
+  width: 100%;
+  margin: 19px auto;
+  border: 5px solid #dee2e6;
+  border-radius: 10px;
+}
+
+#slides-carousel .carousel-item .text-center {
+  color: white;
+  padding: 10px;
+	background-color: #15c833;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+	height: 61px;
+  margin: -10px auto;
+
+}
+
+#slides-carousel .ratio {
+  max-width: 100%;
+  margin: 27px auto;
+}
+
+#slides-carousel .video-iframe {
+  border-radius: 10px;
+}
+
+.text-white {
+  color: rgb(15 13 13) !important;
 }
