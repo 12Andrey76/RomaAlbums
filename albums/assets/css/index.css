@@ -9,6 +9,12 @@ body {
   background-color: #009bff;
 }
 
+.main {
+  min-height: 93vh;
+	margin-bottom: 15%;
+  margin-top: 1%;
+}
+
 .menu_album {
 	background-color: #59ff3f;
   font-size: 150%;
