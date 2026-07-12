@@ -490,7 +490,17 @@ window.albumsData = {
             { thumb: "https://radika1.link/2026/05/10/11b34e2eb9abced0f9.th.jpg", full: "https://radika1.link/2026/05/10/11b34e2eb9abced0f9.jpg", alt: "preview 11", title: "Фото 11" },
             { thumb: "https://s1.radikal.cloud/2026/06/03/1239ec2b53b122c677.th.jpg", full: "https://s1.radikal.cloud/2026/06/03/1239ec2b53b122c677.jpg", alt: "preview 12", title: "Фото 12" }
           ]
-        }
+        },
+        {
+          title: "Блок #2",
+          slides: [
+            { thumb: "https://s1.radikal.cloud/2026/07/12/1d8e20ff09333d399.th.jpg", full: "https://s1.radikal.cloud/2026/07/12/1d8e20ff09333d399.jpg", alt: "preview 1", title: "Фото 1" },
+            { thumb: "https://radika1.link/2026/07/12/24430de01ae9b6e56.th.jpg", full: "https://radika1.link/2026/07/12/24430de01ae9b6e56.jpg", alt: "preview 2", title: "Фото 2" },
+            { thumb: "https://radika1.link/2026/07/12/311df10dc4ccca230.th.jpg", full: "https://radika1.link/2026/07/12/311df10dc4ccca230.jpg", alt: "preview 3", title: "Фото 3" },
+            { thumb: "https://radika1.link/2026/07/12/40086421c00a74162.th.jpg", full: "https://radika1.link/2026/07/12/40086421c00a74162.jpg", alt: "preview 4", title: "Фото 4" },
+            { thumb: "https://s1.radikal.cloud/2026/07/12/51222ae7ff292f728.th.jpg", full: "https://s1.radikal.cloud/2026/07/12/51222ae7ff292f728.jpg", alt: "preview 5", title: "Фото 5" },
+          ]
+        },
       ]
     },
     // ... photo3..9
