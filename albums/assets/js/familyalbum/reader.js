@@ -1,4 +1,5 @@
 // albums/reader.js – полная версия с зацикливанием слайдов внутри блока
+// и динамической кнопкой "Выход"
 
 let currentAlbum = null;
 let currentBlockIndex = 0;
@@ -46,6 +47,28 @@ function stopVideosInSlidesCarousel() {
   });
 }
 
+// ----- ЛОГИКА КНОПКИ "ВЫХОД" -----
+function updateExitLink() {
+  const exitLinks = document.querySelectorAll('#exit-link-mobile, #exit-link-sidebar');
+  const isSlides = slidesCarouselDiv.style.display === 'block';
+
+  exitLinks.forEach(link => {
+    if (isSlides) {
+      // В режиме слайдов – переход к списку блоков
+      link.href = '#';
+      link.onclick = function(e) {
+        e.preventDefault();
+        showBlocksMode();
+        history.pushState(null, '', window.location.pathname + window.location.search);
+      };
+    } else {
+      // В режиме блоков – обычный выход на index.html
+      link.href = window.baseLink || "../../../index.html";
+      link.onclick = null;
+    }
+  });
+}
+
 // ----- РЕЖИМ БЛОКОВ (превью) -----
 function showBlocksMode() {
   // Останавливаем видео перед скрытием карусели
@@ -62,6 +85,7 @@ function showBlocksMode() {
   if (window.location.hash) {
     history.pushState(null, '', window.location.pathname + window.location.search);
   }
+  updateExitLink();
 }
 
 // ----- РЕЖИМ СЛАЙДОВ (оригиналы) -----
@@ -75,6 +99,7 @@ function showSlidesMode() {
   if (slides[currentSlideIndex] && slides[currentSlideIndex].title) {
     document.title = slides[currentSlideIndex].title;
   }
+  updateExitLink();
 }
 
 // ----- РЕНДЕР КАРУСЕЛИ БЛОКОВ -----
@@ -299,25 +324,19 @@ function init() {
   if (hash && hash.includes('block-')) {
     renderSlidesCarousel();
     showSlidesMode();
+    // дополнительно обновляем ссылку выхода
+    updateExitLink();
     return;
   }
 
   showBlocksMode();
-}
-
-// ----- КНОПКА "К БЛОКАМ" -----
-function handleBackToBlocks(e) {
-  e.preventDefault();
-  showBlocksMode();
-  history.pushState(null, '', window.location.pathname + window.location.search);
+  updateExitLink();
 }
 
 // ----- ЗАПУСК -----
 document.addEventListener('DOMContentLoaded', function() {
   init();
-  document.querySelectorAll('#back-to-blocks-link').forEach(el => {
-    el.addEventListener('click', handleBackToBlocks);
-  });
+  // Удаляем обработчик для back-to-blocks-link, так как кнопка удалена
 });
 
 // ----- ХЭШ-НАВИГАЦИЯ -----

@@ -32,8 +32,10 @@ if (currentPage.includes("album.html") && !currentPage.includes("photoalbum") &&
 	}
 	baseLink = "../../../index.html";
 	// Для reader.html стрелки навигации не используются, можно задать заглушки
-
 }
+
+// Делаем baseLink глобальным для reader.js
+window.baseLink = baseLink;
 
 // ========== ШАБЛОНЫ ==========
 
@@ -56,11 +58,9 @@ const headerHTML = `
 </div>
 `;
 
+// УДАЛЕНА кнопка "в месяцы"
 const menuHTML = `
 <div class="row">
-	<div class="col-12 text-center d-md-none d-sm-block">
-    <div class="menu_album"><a id="back-to-blocks-link" href="#">в месяцы</a></div>
-  </div>
   <div class="col-4 text-center d-md-none d-sm-block">
     <div class="menu_album"><a href="${albumlink}">главная</a></div>
   </div>
@@ -68,7 +68,7 @@ const menuHTML = `
     <div class="menu_album"><a href="${albumlink}">меню</a></div>
   </div>
   <div class="col-4 text-center d-md-none d-sm-block">
-    <div class="menu_album"><a href="${baseLink}">выход</a></div>
+    <div class="menu_album"><a href="${baseLink}" id="exit-link-mobile">выход</a></div>
   </div>
 </div>
 `;
@@ -117,15 +117,11 @@ const leftHTML = `
 </div>
 `;
 
+// УДАЛЕН блок "В Месяцы", добавлен id к ссылке "Выход"
 const rightHTML = `
 <div class="card text-bg-white mb-3">
   <div class="card-body">
-    <p class="card-text"><a href="${baseLink}">Выход</a></p>
-  </div>
-</div>
-<div class="card text-bg-white mb-3">
-  <div class="card-body">
-    <p class="card-text" id="back-to-blocks-link"><a href="#">В Месяцы</a></p>
+    <p class="card-text"><a href="${baseLink}" id="exit-link-sidebar">Выход</a></p>
   </div>
 </div>
 <div class="card text-bg-white mb-3">

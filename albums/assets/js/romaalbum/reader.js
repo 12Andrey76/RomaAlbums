@@ -1,4 +1,5 @@
 // albums/romaalbum/reader.js – с поддержкой #block-N (открытие блока)
+// и динамической кнопкой "Выход"
 
 let currentAlbum = null;
 let currentBlockIndex = 0;
@@ -58,17 +59,37 @@ function getCurrentBlockSlides() {
 function stopVideosInSlidesCarousel() {
   const iframes = slidesCarouselDiv.querySelectorAll('iframe');
   iframes.forEach(iframe => {
-    // Сохраняем текущий src в data-src, если он есть и если ещё не сохранён
     if (iframe.src && !iframe.hasAttribute('data-src')) {
       iframe.setAttribute('data-src', iframe.src);
     }
-    iframe.src = ''; // принудительная остановка
+    iframe.src = '';
+  });
+}
+
+// ----- ЛОГИКА КНОПКИ "ВЫХОД" -----
+function updateExitLink() {
+  const exitLinks = document.querySelectorAll('#exit-link-mobile, #exit-link-sidebar');
+  const isSlides = slidesCarouselDiv.style.display === 'block';
+
+  exitLinks.forEach(link => {
+    if (isSlides) {
+      // В режиме слайдов – переход к списку блоков
+      link.href = '#';
+      link.onclick = function(e) {
+        e.preventDefault();
+        showBlocksMode();
+        history.pushState(null, '', window.location.pathname + window.location.search);
+      };
+    } else {
+      // В режиме блоков – обычный выход на index.html
+      link.href = window.baseLink || "../../../index.html";
+      link.onclick = null;
+    }
   });
 }
 
 // ----- РЕЖИМ БЛОКОВ (месяцы) -----
 function showBlocksMode() {
-  // Останавливаем видео перед скрытием карусели слайдов
   stopVideosInSlidesCarousel();
 
   blocksCarouselDiv.style.display = 'block';
@@ -80,17 +101,16 @@ function showBlocksMode() {
     const type = new URLSearchParams(window.location.search).get('type');
     if (type) setActiveMenuItem(type, 'blocks');
   }
-  // Синхронизируем карусель с currentBlockIndex (если она уже создана)
   if (blocksCarousel) {
     blocksCarousel.to(currentBlockIndex);
   }
   if (window.location.hash) {
-    // Если хэш только #block-N, сохраняем его
     const hash = window.location.hash.substring(1);
     if (!hash.startsWith('block-')) {
       history.pushState(null, '', window.location.pathname + window.location.search);
     }
   }
+  updateExitLink();
 }
 
 // ----- РЕЖИМ СЛАЙДОВ (оригиналы) -----
@@ -107,6 +127,7 @@ function showSlidesMode() {
   if (slides[currentSlideIndex] && slides[currentSlideIndex].title) {
     document.title = slides[currentSlideIndex].title;
   }
+  updateExitLink();
 }
 
 // ----- РЕНДЕР КАРУСЕЛИ БЛОКОВ -----
@@ -181,7 +202,6 @@ function onBlockSlide(e) {
     showSlidesMode();
     window.location.hash = `block-${currentBlockIndex+1}-slide-1`;
   } else {
-    // Если в блоках – просто обновляем хэш блока
     window.location.hash = `block-${currentBlockIndex+1}`;
   }
 }
@@ -312,7 +332,6 @@ function init() {
   let isSlidesMode = false;
 
   if (hash) {
-    // Проверяем два формата: block-N-slide-M и block-N
     const slideMatch = hash.match(/block-(\d+)-slide-(\d+)/);
     const blockMatch = hash.match(/block-(\d+)/);
 
@@ -359,28 +378,19 @@ function init() {
   }
 
   document.title = currentAlbum.title;
-}
-
-// ----- КНОПКА "К МЕСЯЦАМ" -----
-function handleBackToBlocks(e) {
-  e.preventDefault();
-  showBlocksMode(); // внутри уже вызывается stopVideosInSlidesCarousel()
-  history.pushState(null, '', window.location.pathname + window.location.search);
+  updateExitLink();
 }
 
 // ----- ЗАПУСК -----
 document.addEventListener('DOMContentLoaded', function() {
   init();
-  document.querySelectorAll('#back-to-blocks-link').forEach(el => {
-    el.addEventListener('click', handleBackToBlocks);
-  });
+  // Удаляем обработчик для back-to-blocks-link
 });
 
 // ----- ХЭШ-НАВИГАЦИЯ -----
 window.addEventListener('hashchange', function() {
   const hash = window.location.hash.substring(1);
   if (!hash) {
-    // Если хэш пустой, возвращаемся в блоки с первым блоком
     if (blocksCarouselDiv.style.display === 'none') {
       showBlocksMode();
     }
@@ -412,18 +422,15 @@ window.addEventListener('hashchange', function() {
         currentBlockIndex = blockIdx;
         currentSlideIndex = 0;
         renderBlocksCarousel();
-        showBlocksMode(); // останавливает видео
-        // обновим хэш, чтобы он остался без slide
+        showBlocksMode();
         history.replaceState(null, '', `#block-${blockIdx+1}`);
       } else {
-        // уже на этом блоке
-        showBlocksMode(); // останавливает видео
+        showBlocksMode();
       }
       return;
     }
   }
 
-  // Если хэш невалидный, возвращаемся в блоки
   if (blocksCarouselDiv.style.display === 'none') {
     showBlocksMode();
   }

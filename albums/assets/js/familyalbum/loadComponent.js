@@ -1,3 +1,5 @@
+// familyalbum/loadComponent.js
+
 const currentPage = window.location.pathname;
 
 // Базовые переменные
@@ -28,6 +30,9 @@ else if (currentPage.includes("reader.html")) {
   albumTitle = "";   // заполняется reader.js
 }
 
+// Делаем baseLink глобальным для reader.js
+window.baseLink = baseLink;
+
 // ========== ШАБЛОНЫ ==========
 
 const headerHTML = `
@@ -40,11 +45,9 @@ const headerHTML = `
 </div>
 `;
 
+// УДАЛЕНА кнопка "К БЛОКАМ" в мобильном меню
 const menuHTML = `
 <div class="row">
-  <div class="col-12 text-center d-md-none d-sm-block">
-    <div class="menu_album"><a id="back-to-blocks-link" href="#">К БЛОКАМ</a></div>
-  </div>
   <div class="col-4 text-center d-md-none d-sm-block">
     <div class="menu_album"><a href="${albumlink}">главная</a></div>
   </div>
@@ -52,7 +55,7 @@ const menuHTML = `
     <div class="menu_album"><a href="${albumlink}">меню</a></div>
   </div>
   <div class="col-4 text-center d-md-none d-sm-block">
-    <div class="menu_album"><a href="${baseLink}">выход</a></div>
+    <div class="menu_album"><a href="${baseLink}" id="exit-link-mobile">выход</a></div>
   </div>
 </div>
 `;
@@ -78,6 +81,7 @@ const buttonHTML = `
 </button>
 `;
 
+// УДАЛЕН блок "К БЛОКАМ" в сайдбаре, добавлен id к ссылке "ВЫХОД"
 const sidebarHTML = `
 <div class="card text-bg-white mb-3">
   <div class="card-body">
@@ -86,12 +90,7 @@ const sidebarHTML = `
 </div>
 <div class="card text-bg-white mb-3">
   <div class="card-body">
-    <p class="card-text"><a href="${baseLink}">ВЫХОД</a></p>
-  </div>
-</div>
-<div class="card text-bg-white mb-3">
-  <div class="card-body">
-    <p class="card-text" id="back-to-blocks-link"><a href="#">К БЛОКАМ</a></p>
+    <p class="card-text"><a href="${baseLink}" id="exit-link-sidebar">ВЫХОД</a></p>
   </div>
 </div>
 <div class="card text-bg-white mb-3">
