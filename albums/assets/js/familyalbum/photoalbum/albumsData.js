@@ -499,7 +499,10 @@ window.albumsData = {
             { thumb: "https://radika1.link/2026/07/12/311df10dc4ccca230.th.jpg", full: "https://radika1.link/2026/07/12/311df10dc4ccca230.jpg", alt: "preview 3", title: "Фото 3" },
             { thumb: "https://radika1.link/2026/07/12/40086421c00a74162.th.jpg", full: "https://radika1.link/2026/07/12/40086421c00a74162.jpg", alt: "preview 4", title: "Фото 4" },
             { thumb: "https://s1.radikal.cloud/2026/07/12/51222ae7ff292f728.th.jpg", full: "https://s1.radikal.cloud/2026/07/12/51222ae7ff292f728.jpg", alt: "preview 5", title: "Фото 5" },
-            { thumb: "https://radika1.link/2026/07/23/6432d673204ddfcbc.th.jpg", full: "https://radika1.link/2026/07/23/6432d673204ddfcbc.jpg", alt: "preview 5", title: "Фото 6" },
+            { thumb: "https://radika1.link/2026/07/23/6432d673204ddfcbc.th.jpg", full: "https://radika1.link/2026/07/23/6432d673204ddfcbc.jpg", alt: "preview 6", title: "Фото 6" },
+            { thumb: "https://s1.radikal.cloud/2026/08/30/74b9cc6b86da77833.th.jpg", full: "https://s1.radikal.cloud/2026/08/30/74b9cc6b86da77833.jpg", alt: "preview 7", title: "Фото 7" },
+            { thumb: "https://s1.radikal.cloud/2026/08/30/865e36b20189cac84.th.jpg", full: "https://s1.radikal.cloud/2026/08/30/865e36b20189cac84.jpg", alt: "preview 8", title: "Фото 8" },
+            { thumb: "https://radika1.link/2026/08/30/90234fa43319b7126.th.jpg", full: "https://radika1.link/2026/08/30/90234fa43319b7126.jpg", alt: "preview 9", title: "Фото 9" },
           ]
         },
       ]
