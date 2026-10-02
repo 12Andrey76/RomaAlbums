@@ -503,6 +503,7 @@ window.albumsData = {
             { thumb: "https://s1.radikal.cloud/2026/08/30/74b9cc6b86da77833.th.jpg", full: "https://s1.radikal.cloud/2026/08/30/74b9cc6b86da77833.jpg", alt: "preview 7", title: "Фото 7" },
             { thumb: "https://s1.radikal.cloud/2026/08/30/865e36b20189cac84.th.jpg", full: "https://s1.radikal.cloud/2026/08/30/865e36b20189cac84.jpg", alt: "preview 8", title: "Фото 8" },
             { thumb: "https://radika1.link/2026/08/30/90234fa43319b7126.th.jpg", full: "https://radika1.link/2026/08/30/90234fa43319b7126.jpg", alt: "preview 9", title: "Фото 9" },
+            { thumb: "https://s1.radikal.cloud/2026/10/02/107ddf4dc8e08d1454.th.jpg", full: "https://s1.radikal.cloud/2026/10/02/107ddf4dc8e08d1454.jpg", alt: "preview 10", title: "Фото 10" },
           ]
         },
       ]
