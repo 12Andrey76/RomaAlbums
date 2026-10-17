@@ -462,6 +462,7 @@ footer h1 {
   right: 10px;
   width: 34px;
   height: 34px;
+	bottom: -20px;
   display: flex;
   align-items: center;
   justify-content: center;
