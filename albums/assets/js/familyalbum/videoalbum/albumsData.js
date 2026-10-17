@@ -352,6 +352,9 @@ window.albumsData = {
             { thumb: "https://s1.radikal.cloud/2026/08/30/3aafd9a84fc359973.th.jpg",
               iframeSrc: "https://rutube.ru/play/embed/4498212ed98ed262e1e7bc68fd87064b/?p=hGdHd_cBWqXcFF7p_1_HRw", 
               title: "Видео 3", alt: "Видео 3" },
+            { thumb: "https://s1.radikal.cloud/2026/10/17/1000055022a3f50cee6820df07.th.jpg",
+              iframeSrc: "https://rutube.ru/play/embed/3f57ae0bf38c17b63c2a3de6fd873f9c/?p=4pu_WXr_mOb0y0gzFF2ZDw", 
+              title: "Видео 4", alt: "Видео 4" },
           ]
         }
       ]

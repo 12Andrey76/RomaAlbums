@@ -359,11 +359,7 @@ footer h1 {
 	.album p {
 		font-size: 160%;
 	 }
-
-	.content {
-		margin-bottom: 0;
-	 }
-
+	 
 	.menu_album a {
 		color: black;
 		font-size: 150%;
@@ -451,3 +447,38 @@ footer h1 {
 .text-white {
   color: rgb(15 13 13) !important;
 }
+
+/* ===== Фото-слайды: ссылка + иконка "открыть в новой вкладке" ===== */
+
+.photo-link {
+  position: relative;
+  display: block;
+  cursor: zoom-in;
+	margin-bottom: 25px;
+}
+
+.photo-link-badge {
+  position: absolute;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  pointer-events: none;           /* клик проходит на ссылку */
+  transition: background 0.2s, transform 0.2s;
+}
+
+.photo-link:hover .photo-link-badge {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.08);
+}
+
+/* На узких экранах прячем — там тап и так уводит по ссылке */
+/* @media (max-width: 576px) {
+  .photo-link-badge { display: none; }
+} */

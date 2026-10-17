@@ -1,5 +1,6 @@
 // albums/romaalbum/reader.js – с поддержкой #block-N (открытие блока)
 // и динамической кнопкой "Выход"
+// Поддерживает: window.albumsData.photo.blocks и window.albumsData.video.blocks
 
 let currentAlbum = null;
 let currentBlockIndex = 0;
@@ -16,26 +17,21 @@ function toggleNavVisibility(show) {
   if (!navContainer) return;
   const slideAlbum = navContainer.querySelector('.slide_album');
   if (slideAlbum) {
-    if (show) {
-      slideAlbum.classList.remove('d-none');
-    } else {
-      slideAlbum.classList.add('d-none');
-    }
+    if (show) slideAlbum.classList.remove('d-none');
+    else      slideAlbum.classList.add('d-none');
   }
 }
 
 // ----- ОБНОВЛЕНИЕ ЗАГОЛОВКА В #nav -----
 function updateNavTitle(title) {
   const titleEl = document.querySelector('.slide_album h4');
-  if (titleEl) {
-    titleEl.textContent = title || '';
-  }
+  if (titleEl) titleEl.textContent = title || '';
 }
 
 // ----- УПРАВЛЕНИЕ ПОДСВЕТКОЙ В САЙДБАРЕ -----
 function setActiveMenuItem(type, mode) {
   const albumId = (type === 'photo') ? 'active-photo-album' : 'active-video-album';
-  const slideId = (type === 'photo') ? 'active-photo' : 'active-video';
+  const slideId = (type === 'photo') ? 'active-photo'       : 'active-video';
 
   const albumEl = document.getElementById(albumId);
   const slideEl = document.getElementById(slideId);
@@ -49,13 +45,13 @@ function setActiveMenuItem(type, mode) {
   }
 }
 
-// ----- ПОЛУЧЕНИЕ СЛАЙДОВ ТЕКУЩЕГО БЛОКА -----
+// ----- СЛАЙДЫ ТЕКУЩЕГО БЛОКА -----
 function getCurrentBlockSlides() {
   if (!currentAlbum || !currentAlbum.blocks || currentAlbum.blocks.length === 0) return [];
   return currentAlbum.blocks[currentBlockIndex]?.slides || [];
 }
 
-// ----- ОСТАНОВКА ВИДЕО В КАРУСЕЛИ СЛАЙДОВ -----
+// ----- ОСТАНОВКА ВИДЕО -----
 function stopVideosInSlidesCarousel() {
   const iframes = slidesCarouselDiv.querySelectorAll('iframe');
   iframes.forEach(iframe => {
@@ -66,14 +62,46 @@ function stopVideosInSlidesCarousel() {
   });
 }
 
-// ----- ЛОГИКА КНОПКИ "ВЫХОД" -----
+// ----- ХЕЛПЕР: создать обёртку-фото с иконкой "открыть в новой вкладке" -----
+function createPhotoSlideElement(slide) {
+  const link = document.createElement('a');
+  link.href = slide.full;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.className = 'd-block photo-link';
+  link.title = 'Открыть оригинал в новой вкладке';
+  link.addEventListener('click', (e) => e.stopPropagation());
+
+  const img = document.createElement('img');
+  img.src = slide.full;
+  img.alt = slide.alt || 'Фото';
+  img.className = 'img-fluid';
+
+  link.appendChild(img);
+
+  // Иконка в правом нижнем углу (как в видеоплеерах)
+  const badge = document.createElement('span');
+  badge.className = 'photo-link-badge';
+  badge.setAttribute('aria-hidden', 'true');
+  badge.innerHTML = `
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+      <polyline points="15 3 21 3 21 9"/>
+      <line x1="10" y1="14" x2="21" y2="3"/>
+    </svg>`;
+  link.appendChild(badge);
+
+  return link;
+}
+
+// ----- КНОПКА "ВЫХОД" -----
 function updateExitLink() {
   const exitLinks = document.querySelectorAll('#exit-link-mobile, #exit-link-sidebar');
   const isSlides = slidesCarouselDiv.style.display === 'block';
 
   exitLinks.forEach(link => {
     if (isSlides) {
-      // В режиме слайдов – переход к списку блоков
       link.href = '#';
       link.onclick = function(e) {
         e.preventDefault();
@@ -81,14 +109,13 @@ function updateExitLink() {
         history.pushState(null, '', window.location.pathname + window.location.search);
       };
     } else {
-      // В режиме блоков – обычный выход на index.html
       link.href = window.baseLink || "../../../index.html";
       link.onclick = null;
     }
   });
 }
 
-// ----- РЕЖИМ БЛОКОВ (месяцы) -----
+// ----- РЕЖИМ БЛОКОВ -----
 function showBlocksMode() {
   stopVideosInSlidesCarousel();
 
@@ -101,9 +128,7 @@ function showBlocksMode() {
     const type = new URLSearchParams(window.location.search).get('type');
     if (type) setActiveMenuItem(type, 'blocks');
   }
-  if (blocksCarousel) {
-    blocksCarousel.to(currentBlockIndex);
-  }
+  if (blocksCarousel) blocksCarousel.to(currentBlockIndex);
   if (window.location.hash) {
     const hash = window.location.hash.substring(1);
     if (!hash.startsWith('block-')) {
@@ -113,7 +138,7 @@ function showBlocksMode() {
   updateExitLink();
 }
 
-// ----- РЕЖИМ СЛАЙДОВ (оригиналы) -----
+// ----- РЕЖИМ СЛАЙДОВ -----
 function showSlidesMode() {
   blocksCarouselDiv.style.display = 'none';
   slidesCarouselDiv.style.display = 'block';
@@ -156,10 +181,11 @@ function renderBlocksCarousel() {
       link.className = 'd-block';
       link.dataset.blockIndex = idx;
       link.dataset.slideIndex = sIdx;
+      if (slide.full) link.dataset.full = slide.full;
 
       const img = document.createElement('img');
       img.src = slide.thumb || (slide.iframeSrc ? 'https://via.placeholder.com/300x200/444/fff?text=Видео' : '');
-      img.alt = slide.alt || slide.title || 'Фото';
+      img.alt = slide.alt || slide.title || 'Медиа';
       img.className = 'img-fluid rounded';
 
       link.appendChild(img);
@@ -174,6 +200,13 @@ function renderBlocksCarousel() {
         showSlidesMode();
         window.location.hash = `block-${currentBlockIndex+1}-slide-${currentSlideIndex+1}`;
       });
+
+      link.addEventListener('auxclick', (e) => {
+        if (e.button === 1 && slide.full) {
+          e.preventDefault();
+          window.open(slide.full, '_blank', 'noopener,noreferrer');
+        }
+      });
     });
 
     item.appendChild(rowDiv);
@@ -181,16 +214,13 @@ function renderBlocksCarousel() {
   });
 
   if (blocksCarousel) blocksCarousel.dispose();
-  blocksCarousel = new bootstrap.Carousel(blocksCarouselDiv, {
-    interval: false,
-    wrap: true
-  });
+  blocksCarousel = new bootstrap.Carousel(blocksCarouselDiv, { interval: false, wrap: true });
 
   blocksCarouselDiv.removeEventListener('slid.bs.carousel', onBlockSlide);
   blocksCarouselDiv.addEventListener('slid.bs.carousel', onBlockSlide);
 }
 
-// ----- ОБРАБОТЧИК СМЕНЫ БЛОКА -----
+// ----- СМЕНА БЛОКА -----
 function onBlockSlide(e) {
   currentBlockIndex = e.to;
   if (slidesCarouselDiv.style.display === 'block') {
@@ -213,10 +243,7 @@ function renderSlidesCarousel() {
 
   const slides = getCurrentBlockSlides();
   if (slides.length === 0) return;
-
-  if (currentSlideIndex >= slides.length) {
-    currentSlideIndex = 0;
-  }
+  if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
 
   slides.forEach((slide, idx) => {
     const item = document.createElement('div');
@@ -230,6 +257,7 @@ function renderSlidesCarousel() {
     }
 
     if (slide.iframeSrc) {
+      // ---- ВИДЕО: без обёртки, у Rutube своя кнопка фуллскрина ----
       const ratioDiv = document.createElement('div');
       ratioDiv.className = 'ratio ratio-16x9';
       const iframe = document.createElement('iframe');
@@ -237,29 +265,20 @@ function renderSlidesCarousel() {
       iframe.frameBorder = '0';
       iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
       iframe.className = 'video-iframe';
-      if (idx === currentSlideIndex) {
-        iframe.src = slide.iframeSrc;
-      } else {
-        iframe.setAttribute('data-src', slide.iframeSrc);
-      }
+      if (idx === currentSlideIndex) iframe.src = slide.iframeSrc;
+      else iframe.setAttribute('data-src', slide.iframeSrc);
       ratioDiv.appendChild(iframe);
       item.appendChild(ratioDiv);
     } else {
-      const img = document.createElement('img');
-      img.src = slide.full;
-      img.alt = slide.alt || 'Фото';
-      img.className = 'img-fluid';
-      item.appendChild(img);
+      // ---- ФОТО: ссылка + <img> + иконка-бейдж ----
+      item.appendChild(createPhotoSlideElement(slide));
     }
 
     container.appendChild(item);
   });
 
   if (slidesCarousel) slidesCarousel.dispose();
-  slidesCarousel = new bootstrap.Carousel(slidesCarouselDiv, {
-    interval: false,
-    wrap: true
-  });
+  slidesCarousel = new bootstrap.Carousel(slidesCarouselDiv, { interval: false, wrap: true });
   slidesCarousel.to(currentSlideIndex);
 
   slidesCarouselDiv.removeEventListener('slid.bs.carousel', onSlideChange);
@@ -268,7 +287,7 @@ function renderSlidesCarousel() {
   slidesCarouselDiv.addEventListener('slide.bs.carousel', onVideoSlide);
 }
 
-// ----- ОБРАБОТЧИК СМЕНЫ СЛАЙДА -----
+// ----- СМЕНА СЛАЙДА -----
 function onSlideChange(e) {
   currentSlideIndex = e.to;
   window.location.hash = `block-${currentBlockIndex+1}-slide-${currentSlideIndex+1}`;
@@ -278,7 +297,7 @@ function onSlideChange(e) {
   }
 }
 
-// ----- ОБРАБОТЧИК ДЛЯ ВИДЕО -----
+// ----- ВИДЕО: пауза/пуск при переключении -----
 function onVideoSlide(e) {
   const currentItem = slidesCarouselDiv.querySelector('.carousel-item.active');
   const nextItem = e.relatedTarget;
@@ -290,14 +309,11 @@ function onVideoSlide(e) {
       currentIframe.src = '';
     }
   }
-
   if (nextItem) {
     const nextIframe = nextItem.querySelector('iframe');
     if (nextIframe) {
       const dataSrc = nextIframe.getAttribute('data-src');
-      if (dataSrc) {
-        nextIframe.src = dataSrc;
-      }
+      if (dataSrc) nextIframe.src = dataSrc;
     }
   }
 }
@@ -347,23 +363,13 @@ function init() {
         } else {
           currentBlockIndex = blockIdx;
           currentSlideIndex = 0;
-          isSlidesMode = false;
         }
-      } else {
-        currentBlockIndex = 0;
-        currentSlideIndex = 0;
-        isSlidesMode = false;
       }
     } else if (blockMatch) {
       blockIdx = parseInt(blockMatch[1]) - 1;
       if (blockIdx >= 0 && blockIdx < currentAlbum.blocks.length) {
         currentBlockIndex = blockIdx;
         currentSlideIndex = 0;
-        isSlidesMode = false;
-      } else {
-        currentBlockIndex = 0;
-        currentSlideIndex = 0;
-        isSlidesMode = false;
       }
     }
   }
@@ -382,18 +388,13 @@ function init() {
 }
 
 // ----- ЗАПУСК -----
-document.addEventListener('DOMContentLoaded', function() {
-  init();
-  // Удаляем обработчик для back-to-blocks-link
-});
+document.addEventListener('DOMContentLoaded', init);
 
 // ----- ХЭШ-НАВИГАЦИЯ -----
 window.addEventListener('hashchange', function() {
   const hash = window.location.hash.substring(1);
   if (!hash) {
-    if (blocksCarouselDiv.style.display === 'none') {
-      showBlocksMode();
-    }
+    if (blocksCarouselDiv.style.display === 'none') showBlocksMode();
     return;
   }
 
@@ -431,7 +432,5 @@ window.addEventListener('hashchange', function() {
     }
   }
 
-  if (blocksCarouselDiv.style.display === 'none') {
-    showBlocksMode();
-  }
+  if (blocksCarouselDiv.style.display === 'none') showBlocksMode();
 });
