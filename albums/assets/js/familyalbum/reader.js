@@ -158,7 +158,7 @@ function renderBlocksCarousel() {
       if (slide.full) link.dataset.full = slide.full;
 
       const img = document.createElement('img');
-      img.src = slide.thumb || (slide.iframeSrc ? 'https://via.placeholder.com/300x200/444/fff?text=Видео' : '');
+      img.src = slide.thumb || (slide.iframeSrc ? '/albumsFiles/video-placeholder.jpg' : '');
       img.alt = slide.alt || slide.title || 'Медиа';
       img.className = 'img-fluid rounded';
 

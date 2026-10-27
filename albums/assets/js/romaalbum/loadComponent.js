@@ -10,10 +10,15 @@ let albumTitle = "Фотоальбом";
 let prevAlbumLink = "photo/photo12.html";
 let nextAlbumLink = "photo/photo1.html";
 
+// Базовый путь к папке с превью-картинками (foto.png, video.png)
+// По умолчанию считаем, что мы в album.html (глубина 2)
+let imgBase = "../../albumsFiles/IMGpreview/album1/";
+
 // ========== Главная страница альбома ==========
 if (currentPage.includes("album.html") && !currentPage.includes("photoalbum") && !currentPage.includes("videoalbum")) {
 	albumlink = "album.html";
 	baseLink = "../../index.html";
+	imgBase = "../../albumsFiles/IMGpreview/album1/";
 
 // ========== Страница reader (универсальный просмотр) ==========
 } else if (currentPage.includes("reader.html")) {
@@ -31,7 +36,7 @@ if (currentPage.includes("album.html") && !currentPage.includes("photoalbum") &&
 		albumTitle = "Альбом";
 	}
 	baseLink = "../../../index.html";
-	// Для reader.html стрелки навигации не используются, можно задать заглушки
+	imgBase = "../../../albumsFiles/IMGpreview/album1/";
 }
 
 // Делаем baseLink глобальным для reader.js
@@ -44,10 +49,10 @@ const headerHTML = `
   <div class="container">
     <div class="row">
       <div class="foto col-md-3 d-none d-md-block d-lg-block">
-        <img src="https://radika1.link/2025/11/30/foto17853372871b0e39.png" class="img-thumbnail col-10" alt="картинка">
+        <img src="${imgBase}foto.png" class="img-thumbnail col-10" alt="картинка">
       </div>
       <div class="video col-md-3 d-none d-md-block d-lg-block">
-        <img src="https://s3.radikal.cloud/2025/11/30/videoc4aca0d3b2cf4a19.png" class="img-thumbnail col-10" alt="картинка">
+        <img src="${imgBase}video.png" class="img-thumbnail col-10" alt="картинка">
       </div>
       <div class="logo col-md-12">
         <h1><a href="${albumlink}">Альбом Ромы</a></h1>
