@@ -148,7 +148,7 @@ function renderBlocksCarousel() {
 
     block.slides.forEach((slide, sIdx) => {
       const colDiv = document.createElement('div');
-      colDiv.className = 'col-4 col-md-4 mb-2';
+      colDiv.className = 'col-3 col-md-3 mb-2';
 
       const link = document.createElement('a');
       link.href = '#';

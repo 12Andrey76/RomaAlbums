@@ -230,7 +230,7 @@ footer h1 {
 	width: 47%;
 }
 
-#blocks-carousel .col-4 img {
+#blocks-carousel .col-3 img {
 	border-radius: 50% !important;
 	border: 5px solid #ddd;
 	transition: transform 0.2s;
@@ -240,7 +240,7 @@ footer h1 {
 	aspect-ratio: 1 / 1;
 }
 
-#blocks-carousel .col-4 img:hover {
+#blocks-carousel .col-3 img:hover {
     transform: scale(1.05);
     border-color: white;
 }
