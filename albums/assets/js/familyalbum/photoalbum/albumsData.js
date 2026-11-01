@@ -94,7 +94,7 @@ window.albumsData = {
       title: "Фотоальбом 6 лет",
       blocks: [
         photoBlock("Блок #1", "../../../albumsFiles/afterAYear/photo/photo6/img1", 15),
-        photoBlock("Блок #2", "../../../albumsFiles/afterAYear/photo/photo6/img2", 11),
+        photoBlock("Блок #2", "../../../albumsFiles/afterAYear/photo/photo6/img2", 13),
       ]
     }
   }
